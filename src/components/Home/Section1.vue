@@ -72,10 +72,12 @@
                     <h1 class="about !bg-transparent">Dive into the timeless enchantment of <span class="button-74 small-btn !bg-[#0ae448] !text-[4vw] !text-black rotate-[6.5deg] !p-5" ref="verite">Verité</span> where <span class="button-74 small-btn !p-5 gradient-btn-1 !text-[4vw] relative bottom-10">cherished</span><span class="button-74 small-btn !p-5 gradient-btn-2 !text-[4vw] !shadow-none rotate-[15deg] relative right-5 z-[-1]">memories</span> and vibrant echoes of yesteryears</h1>
                 </div>
                 <div>
-                    <h1>cAssette PlayEr</h1>
+                    <img src="../../assets/img/casette.jpg" />
+                    <!-- <h1>cAssette PlayEr</h1> -->
                 </div>
                 <div>
-                    <h1>vespA</h1>
+                    <img src="../../assets/img/gramaphone.jpg" />
+                    <!-- <h1>vespA</h1> -->
                 </div>
                 <div>
                     <h1>carolinAs pepsi</h1>

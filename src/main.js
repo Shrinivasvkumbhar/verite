@@ -15,17 +15,22 @@ const routes = [
     {
         path: '/games',
         name: 'Games',
-        component: Games
+        component: Test
     },
     {
-        path:'/test',
+        path: '/blogs',
+        name: 'Blogs',
+        component: Test
+    },
+    {
+        path:'/leaderboard',
         name:'Test',
-        component:Test,
+        component: Test,
     },
     {
         path:'/hp',
         name:'HomeWithPlayer',
-        component:HomeWithPlayer
+        component: HomeWithPlayer
     }
 ]
 const router = createRouter({

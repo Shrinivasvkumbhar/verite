@@ -9,10 +9,10 @@
                 <a href="/games" class="nav-item" ref="navItem2">
                     <h1 class="menu-title">Games</h1>
                 </a>
-                <a href="/" class="nav-item" ref="navItem3">
+                <a href="/blogs" class="nav-item" ref="navItem3">
                     <h1 class="menu-title">Blogs</h1>
                 </a>
-                <a href="/" class="nav-item" ref="navItem4">
+                <a href="/leaderboard" class="nav-item" ref="navItem4">
                     <h1 class="menu-title">Leaderboard</h1>
                 </a>
             </div>

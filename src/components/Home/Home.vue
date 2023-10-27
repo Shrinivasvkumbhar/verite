@@ -16,7 +16,6 @@ export default {
     components: {
     MainClone,
     Section1,
-    Section2,
     TextMorph,
 },
     beforeRouteLeave(to, from, next) {
