@@ -3,16 +3,16 @@
         <div class="menu" >
             <div class="flex flex-col gap-[10px] text-center">
                 
-                <a href="/verite/" class="nav-item" ref="navItem1">
+                <a href="/" class="nav-item" ref="navItem1">
                     <h1 class="menu-title">Home</h1>
                 </a>
-                <a href="/verite/test/" class="nav-item" ref="navItem2">
+                <a href="/test/" class="nav-item" ref="navItem2">
                     <h1 class="menu-title">Games</h1>
                 </a>
-                <a href="/verite/test/" class="nav-item" ref="navItem3">
+                <a href="/test/" class="nav-item" ref="navItem3">
                     <h1 class="menu-title">Blogs</h1>
                 </a>
-                <a href="/verite/test/" class="nav-item" ref="navItem4">
+                <a href="/test/" class="nav-item" ref="navItem4">
                     <h1 class="menu-title">Leaderboard</h1>
                 </a>
             </div>

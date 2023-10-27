@@ -8,22 +8,22 @@ import Test from "./components/Test.vue";
 import HomeWithPlayer from "./components/HomeWithPlayer.vue"
 const routes = [
     {
-        path: '/verite/',
+        path: '/',
         name: 'Home',
         component: Home
     },
     {
-        path: '/verite/games',
+        path: '/games',
         name: 'Games',
         component: Games
     },
     {
-        path:'/verite/test',
+        path:'/test',
         name:'Test',
         component:Test
     },
     {
-        path:'/verite/hp',
+        path:'/hp',
         name:'HomeWithPlayer',
         component:HomeWithPlayer
     }
