@@ -17,7 +17,7 @@
                         Start low, aim high!
                     </p>
                 </div>
-                <HeadCard :image="'../../assets/img/sooper-11.png'" :heading="'SOOPER 11'" :description="'Verteil introduces SOOPER11, a thrilling cricket fantasy game exclusively for Verteil employees, adding excitement to the World Cup 23'"/>
+                <HeadCard :image="'src/assets/img/sooper-11.png'" :heading="'SOOPER 11'" :description="'Verteil introduces SOOPER11, a thrilling cricket fantasy game exclusively for Verteil employees, adding excitement to the World Cup 23'"/>
             </div>
              <div  class="head flex justify-center overflow-hidden">
                 <div class="text" id="verite">Vérité</div>
