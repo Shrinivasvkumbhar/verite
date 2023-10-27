@@ -9,7 +9,7 @@
             <div class="wrapper flex text-[16vh] font-medium">
                 <img v-for="el2 in [1, 2, 3, 4, 5, 6, 7, 8, 9]" :key="el2"
                     class="h-80 rounded-xl m-2 transition-all hover:scale-95 cursor-pointer"
-                    :src="`src/assets/unsplash_images/image_${el}_${el2}.jpg`" />
+                    :src="`../../assets/unsplash_images/image_${el}_${el2}.jpg`" />
             </div>
         </section>
         <section class="h-fit photo-wrapper">
@@ -21,7 +21,7 @@
             <div class="wrapper flex text-[16vh] font-medium">
                 <img v-for="el2 in [1, 2, 3, 4, 5, 6, 7, 8, 9]" :key="el2"
                     class="h-80 rounded-xl m-2 transition-all hover:scale-95 cursor-pointer"
-                    :src="'src/assets/unsplash_images/image_'+el+'_'+el2+'.jpg'" />
+                    :src="'../../assets/unsplash_images/image_'+el+'_'+el2+'.jpg'" />
             </div>
         </section>
         <section class="h-fit photo-wrapper">
