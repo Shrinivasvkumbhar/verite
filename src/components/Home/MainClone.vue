@@ -7,7 +7,7 @@
         <div class="main-wrapper flex-col">
            
             <div class="flex items-start justify-around h-fit mt-[50px]">
-                <HeadCard :image="'src/assets/img/pager.jpg'" :heading="'Beep. Play. Repeat'" :description="'Witnessing a revolutionary leap in communication, India embraces the launch of the Nostalgic Pager, facilitating instantaneous connectivity nationwide'"/>
+                <HeadCard :image="'pager.jpg'" :heading="'Beep. Play. Repeat'" :description="'Witnessing a revolutionary leap in communication, India embraces the launch of the Nostalgic Pager, facilitating instantaneous connectivity nationwide'"/>
                 <div class="center-head-card head-card flex flex-col">
                     <h2>Team Bidding!</h2>
                     <p class="paper-desc paper-desc-head">
@@ -17,7 +17,7 @@
                         Start low, aim high!
                     </p>
                 </div>
-                <HeadCard :image="'src/assets/img/sooper-11.png'" :heading="'SOOPER 11'" :description="'Verteil introduces SOOPER11, a thrilling cricket fantasy game exclusively for Verteil employees, adding excitement to the World Cup 23'"/>
+                <HeadCard :image="'sooper-11.png'" :heading="'SOOPER 11'" :description="'Verteil introduces SOOPER11, a thrilling cricket fantasy game exclusively for Verteil employees, adding excitement to the World Cup 23'"/>
             </div>
              <div  class="head flex justify-center overflow-hidden">
                 <div class="text" id="verite">Vérité</div>
