@@ -7,11 +7,6 @@
   src: url(/src/assets/fonts/Canopee.ttf);
 }
 
-@font-face {
-  font-family: Canopee;
-  src: url(/src/assets/fonts/Canopee.ttf);
-}
-
 :root {
   font-family: Canopee, sans-serif;
   line-height: 1.5;

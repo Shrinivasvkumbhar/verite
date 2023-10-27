@@ -21,15 +21,10 @@ const routes = [
         path:'/test',
         name:'Test',
         component:Test
-    },
-    {
-        path:'/hp',
-        name:'HomeWithPlayer',
-        component:HomeWithPlayer
     }
 ]
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/'),
     routes
 })
 createApp(App).use(router).mount('#app')
