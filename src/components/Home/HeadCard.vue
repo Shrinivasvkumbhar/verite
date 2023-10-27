@@ -1,7 +1,7 @@
 <template>
     <div class="head-card">
        <div class="img-container">
-         <img :src="image" alt="" srcset="">
+         <img :src="image" :alt="image" srcset="">
        </div>
         <h3 class="flex items-center">{{heading}} <span class="new-marker">NEW</span></h3>
         <p class="paper-desc">
