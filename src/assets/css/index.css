@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.vue:hover {
+    filter: drop-shadow(0 0 2em #42b883aa);
+  }
+  body{
+    background-color: #CDC6BE ;
+  }
+.hamburger {
+  display: block;
+  z-index: 10;
+  margin-right: 50px;
+}
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #1d1d1b;
+    }
+         .hamburger.active .bar:nth-child(2) {
+           opacity: 0;
+         }
+    
+         .hamburger.active .bar:nth-child(1) {
+           transform: translateY(8px) rotate(45deg);
+           background-color: #cdc6be;
+         }
+    
+         .hamburger.active .bar:nth-child(3) {
+           transform: translateY(-8px) rotate(-45deg);
+                       background-color: #cdc6be;
+         }
+
+.gl-canvas {
+  display: block;
+  pointer-events: none;
+  height: 100vh !important;
+  width: 100vw !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+canvas {
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  pointer-events: none;
+}

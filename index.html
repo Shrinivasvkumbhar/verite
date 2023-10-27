@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verite</title>
+    <style>
+      #app{
+        margin: 0;
+        padding: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gl-canvas below w-embed"><canvas id="below-canvas"></canvas></div>
+    <div id="app">
+      
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="module" src="src/assets/js/paperCurtain.js"></script>
+     
+    <script type="module">
+      import {gsap} from "gsap";
+      import PaperCurtainEffect from "./src/assets/js/paperCurtain.js";
+      const isMobile = false
+      const isHorizontal = false
+
+      const belowCanvas = document.querySelector("#below-canvas");
+      const aboveCanvas = document.querySelector("#above-canvas");
+
+      // console.log('canvas: ', aboveCanvas);
+      // console.log('is Horizontal: ', isHorizontal && !isMobile)
+
+      const paperCurtainEffect = new PaperCurtainEffect(aboveCanvas, {
+        color: "#1D1D1B",
+        background: "#000000",
+        backgroundOpacity: 0,
+        ease: "power3.inOut",
+        duration: 2,
+        texture:
+          "https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg",
+        amplitude: 0.25,
+        rippedFrequency: 3.5,
+        rippedAmplitude: 0.05,
+        curveFrequency: 1,
+        curveAmplitude: 0.1,
+        rippedDelta: 1,
+        rippedHeight: 0.07,
+        horizontal: isHorizontal && !isMobile
+      });
+
+      // console.log('effect: ', paperCurtainEffect);
+
+      window.paperCurtainEffect = paperCurtainEffect;
+
+      // if (window.location.href.includes('?')) { app.classList.add('appear') }
+      // if (window.location.pathname !== '/' && !window.location.pathname.includes('/work/') && !window.location.href.includes('?')) {
+      //   window.belowPaperCurtainEffect = new PaperCurtainEffect(belowCanvas, {
+      //     color: "#cdc6be",
+      //     background: "#1D1D1B",
+      //     backgroundOpacity: 1,
+      //     ease: "power3.inOut",
+      //     duration: 2,
+      //     texture:
+      //       "https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg",
+      //     amplitude: 0.25,
+      //     rippedFrequency: 3.5,
+      //     rippedAmplitude: 0.05,
+      //     curveFrequency: 1,
+      //     curveAmplitude: 0.1,
+      //     rippedDelta: 1,
+      //     rippedHeight: 0.07,
+      //     horizontal: false
+      //   });
+
+      //   //const image = document.querySelector("[data-image]")
+      //   //if(image) {
+      //   //  const src = image.getAttribute("data-image")
+      //   //  window.belowPaperCurtainEffect.curtain.setImage(image)
+      //   //}
+
+      //   // console.log('in init')
+      //   window.belowPaperCurtainEffect.in()
+      //   // const app = document.querySelector('#app')
+      //   // setTimeout(() => {
+      //   //     app.classList.add('appear')
+      //   // }, 2000)
+      // }
+
+      //Work page
+      var navWorkPage = document.querySelector(".nav.work")
+      if (navWorkPage) {
+        const workCanvas = navWorkPage.querySelector('.gl-canvas canvas')
+        window.workPaperCurtainEffect = new PaperCurtainEffect(workCanvas, {
+          color: "#1D1D1B",
+          background: "#000000",
+          backgroundOpacity: 0,
+          ease: "power3.inOut",
+          duration: 2,
+          texture:
+            "https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg",
+          amplitude: 0.25,
+          rippedFrequency: 3.5,
+          rippedAmplitude: 0.05,
+          curveFrequency: 1,
+          curveAmplitude: 0.1,
+          rippedDelta: 1,
+          rippedHeight: 0.07,
+          horizontal: isHorizontal && !isMobile
+        });
+      }
+
+      let toggle = false;
+      let transition = false;
+
+      function onNavClick(e) {
+        // console.log('listener 1', transition)
+       
+        if (transition) return;
+        toggle = !toggle;
+
+        if (toggle) {
+          // console.log('in menu')
+          
+           document.querySelector(".hamburger").classList.add("active");
+           document.querySelector(".v-header").classList.add("active");
+          window.paperCurtainEffect.in();
+          setTimeout(() => {
+            document.querySelector('.nav').style.display = "flex"
+            animateMenu(true);
+          }, 800);
+          setTimeout(() => {
+             document.querySelector('.nav .menu').style.backgroundColor = "#1d1d1b";
+          }, 2000);
+          
+        } else {
+          // console.log('out menu')
+          window.paperCurtainEffect.out();
+          document.querySelector(".hamburger").classList.remove("active");
+          document.querySelector(".v-header").classList.remove("active");
+          document.querySelector('.nav .menu').style.backgroundColor = "transparent";
+            animateMenu(false);
+          setTimeout(() => {
+            document.querySelector('.nav').style.display = "none"
+            console.log("done");
+           
+          }, 1000);
+         
+        }
+      }
+      const animateMenu = (show) => {
+        const menu=document.querySelector('.nav');
+        const navItems = document.querySelectorAll(".nav-item h1");
+          if (show) {
+            gsap.fromTo(
+              navItems,
+              {
+                y: "100%",
+                opacity: 0
+              },
+              {
+                y: "0%",
+                opacity: 1,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power4.out"
+              }
+            );
+          } else {
+            console.log("some");
+            gsap.fromTo(
+              navItems,
+              {
+                y: "0%",
+                opacity: 1,
+              },
+              {
+                y: "100%",
+                opacity: 0,
+                duration: 0.5,
+                stagger: 0.2
+              }
+            );
+          }
+
+        };
+
+      function onWorkNavClick(e) {
+        console.log('listener 1', transition)
+
+        if (transition) return;
+        toggle = !toggle;
+
+        if (toggle) {
+          // console.log('in work nav')
+          window.workPaperCurtainEffect.in();
+        } else {
+          // console.log('out work nav')
+          window.workPaperCurtainEffect.out();
+        }
+      }
+
+
+
+      //Work page
+      navWorkPage = document.querySelector(".nav.work")
+      if (navWorkPage) {
+        navWorkPage.querySelector(".nav-block.r").addEventListener("click", onWorkNavClick);
+      }
+
+      const internalLinks = [...document.querySelectorAll("a")].filter((link) =>
+        link.href.includes(document.location.host)
+      );
+
+      // internalLinks.forEach((link) => {
+      //   const href = link.href;
+
+      //   // Work single page template, transition won't work for some reason so i'm disabling it on this button
+      //   if (link.classList.contains('back-all')) return
+
+      //   link.addEventListener(
+      //     "click",()=>{
+      //       console.log('clicked');
+      //       window.location.href=href;
+      //     }
+      //   );
+      // });
+      document.querySelector(".hamburger").addEventListener("click", onNavClick);
+    </script>
+      
+     
+  </body>
+</html>

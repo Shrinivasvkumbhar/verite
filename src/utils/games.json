@@ -1,0 +1,45 @@
+[
+    {
+        "name": "Game Name 1",
+        "about": "This game 1 is to do this and that to get this achievement. The one who gets the achievement wins.",
+        "rules": [
+            "You have to be within certain limits while playing the game",
+            "The constraints are applied without any bias"
+        ],
+        "no_of_participants_per_team": 3,
+        "image": "/src/assets/img/game-card-image.jpg"
+    },
+    {
+        "name": "Game Name 2",
+        "about": "This game 2 is to do this and that to get this achievement. The one who gets the achievement wins.",
+        "rules": [
+            "You have to be within certain limits while playing the game",
+            "The constraints are applied without any bias",
+            "You can either choose rule 1 or rule 2"
+        ],
+        "no_of_participants_per_team": 4,
+        "image": "/src/assets/img/game-card-image.jpg"
+    },
+    {
+        "name": "Game Name 3",
+        "about": "This game 3 is to do this and that to get this achievement. The one who gets the achievement wins.",
+        "rules": [
+            "You have to be within certain limits while playing the game",
+            "The constraints are applied without any bias",
+            "You can either choose rule 1 or rule 2"
+        ],
+        "no_of_participants_per_team": 2,
+        "image": "/src/assets/img/game-card-image.jpg"
+    },
+    {
+        "name": "Game Name 4",
+        "about": "This game 4 is to do this and that to get this achievement. The one who gets the achievement wins.",
+        "rules": [
+            "You have to be within certain limits while playing the game",
+            "The constraints are applied without any bias"
+        ],
+        "no_of_participants_per_team": 3,
+        "image": "/src/assets/img/game-card-image.jpg"
+    }
+    
+]
