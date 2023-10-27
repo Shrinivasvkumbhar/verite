@@ -12,7 +12,7 @@ $company:#88A94F;
 $sec-font:'Mori';
 @font-face {
     font-family: 'Chomsky';
-    src: url('src/assets/fonts/Chomsky-399c.woff') format('woff');
+    src: url('/src/assets/fonts/Chomsky-399c.woff') format('woff');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -20,7 +20,7 @@ $sec-font:'Mori';
 
 @font-face {
     font-family: 'Editorial';
-    src: url('src/assets/fonts/EditorialNew-Light.woff2') format('woff2');
+    src: url('/src/assets/fonts/EditorialNew-Light.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -28,7 +28,7 @@ $sec-font:'Mori';
 
 @font-face {
     font-family: 'Editorial New';
-    src: url('src/assets/fonts/EditorialNew-Medium.woff2') format('woff2');
+    src: url('/src/assets/fonts/EditorialNew-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -36,7 +36,7 @@ $sec-font:'Mori';
 
 @font-face {
     font-family: 'Canopee';
-    src: url('src/assets/fonts/Canopee.woff2') format('woff2');
+    src: url('/src/assets/fonts/Canopee.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
