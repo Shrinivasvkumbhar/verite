@@ -7,7 +7,7 @@
         <div class="main-wrapper flex-col">
            
             <div class="flex items-start justify-around h-fit mt-[50px]">
-                <HeadCard :image="'../../assets/img/pager.jpg'" :heading="'Beep. Play. Repeat'" :description="'Witnessing a revolutionary leap in communication, India embraces the launch of the Nostalgic Pager, facilitating instantaneous connectivity nationwide'"/>
+                <HeadCard :image="'src/assets/img/pager.jpg'" :heading="'Beep. Play. Repeat'" :description="'Witnessing a revolutionary leap in communication, India embraces the launch of the Nostalgic Pager, facilitating instantaneous connectivity nationwide'"/>
                 <div class="center-head-card head-card flex flex-col">
                     <h2>Team Bidding!</h2>
                     <p class="paper-desc paper-desc-head">

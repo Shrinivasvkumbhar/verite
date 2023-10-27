@@ -20,7 +20,12 @@ const routes = [
     {
         path:'/test',
         name:'Test',
-        component:Test
+        component:Test,
+    },
+    {
+        path:'/hp',
+        name:'HomeWithPlayer',
+        component:HomeWithPlayer
     }
 ]
 const router = createRouter({
