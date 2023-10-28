@@ -1,57 +1,7 @@
 <template>
 
-        <section class="section1 sec-loc">
-            
-            <div class="location">
-               
-                <div class="about-sec">
-                     <div class="about-wrapper">
-                        <div class="flex flex-col">
-                            <div class="sub-head flex flex-col">
-                                <span>Lake Side</span>
-                                <span>Bolgatty Palace</span>
-                            </div>
-                            
-                            <div class="mt-[10px]">
-                                <span class="text-lg">
-                                    <p>Mulavukad, Ernakulam, <br>Kerala, India</p>
-                                </span>
-                            </div>
-
-                            <div class="direct mt-[20px]">
-                                <button class="btn">
-                                    GET DIRECTIONS
-                                </button>
-                            </div>
-                            
-                            <div class="flex mt-[100px] items-center">
-                                <span class="text-3xl mr-[20px]">PIN</span> 
-                                <span class="pin">6</span>
-                                <span class="pin">8</span>
-                                <span class="pin">2</span>
-                                <span class="pin">5</span>
-                                <span class="pin">0</span>
-                                <span class="pin">4</span>
-
-                            </div> 
-                        </div>
-                    </div>
-                    <div class=" border-r-[1px] border-black"></div>
-                    <div class="about-wrapper">
-                        <div class="head w-50 flex justify-start flex-col space-y-1 ">
-                        <div class="flex justify-start">
-                            <h1 class=" !text-[8vw] about mr-2">LET'S</h1>
-                            <div>
-                                <img class="h-[11vw]" src="../../assets/img/stamp.png" alt="" srcset="">
-                            </div>
-                        </div>
-                            <h1 class="about !text-[8vw]">CELEBRATE</h1>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-        </section>
+       
+    
         <section class="section1" id="main-slider-container">
             <div id="slider-container" class="slider-container" ref="sliderContainer">
                 <div class="banner-text flex flex-col !items-start p-10">
@@ -95,14 +45,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export default {
     mounted() {
         gsap.registerPlugin(ScrollTrigger);
-        const candy=this.$refs.candy;
+        const candy = this.$refs.candy;
         const imgSlider = this.$refs.sliderContainer;
         const imgSliderMain = document.getElementById('main-slider-container');
-
         let windowWidth = window.innerWidth;
-        let calculateSliderX =
-            imgSlider.children[0].offsetWidth*3 + imgSlider.children[1].offsetWidth - windowWidth;
-
+        let calculateSliderX = imgSlider.children[0].offsetWidth * 3 + imgSlider.children[1].offsetWidth - windowWidth;
         let imgSliderTimeline = gsap.timeline({
             default: {
                 ease: 'none',
@@ -114,10 +61,8 @@ export default {
                 end: '+200%',
                 scrub: 1,
                 invalidateOnRefresh: true,
-
             },
         });
-
         imgSliderTimeline.to(imgSlider, {
             x: -calculateSliderX,
             duration: 3,
@@ -128,12 +73,12 @@ export default {
                 trigger: ".banner-text",
                 start: "top+=450px ",
                 end: "+=450px",
-                markers:true,
+                markers: true,
                 // scrub: true,
                 toggleActions: "play none none none"
             }
         });
-        const verite=this.$refs.verite;
+        const verite = this.$refs.verite;
         tl.to(verite, {
             duration: 0.65,
             rotation: 45,
@@ -144,27 +89,22 @@ export default {
             delay: -0.65,
             ease: "power2.out"
         });
-    
-         // Candy animation to come from top
-         gsap.fromTo(
-            candy,
-            {
-                y: "100%",
-                opacity: 0,
+        // Candy animation to come from top
+        gsap.fromTo(candy, {
+            y: "100%",
+            opacity: 0,
+        }, {
+            y: "0%",
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: imgSliderMain,
+                start: "top 30%",
+                end: "bottom bottom",
+                scrub: true,
             },
-            {
-                y: "0%",
-                opacity: 1,
-                duration: 0.5,
-                stagger: 0.2,
-                scrollTrigger: {
-                    trigger: imgSliderMain,
-                    start: "top 30%",
-                    end: "bottom bottom",
-                    scrub: true,
-                },
-            }
-        );
+        });
         const candyAnimation = gsap.to(candy, {
             scrollTrigger: {
                 trigger: imgSliderMain,
@@ -172,28 +112,26 @@ export default {
                 end: 'bottom 30%',
                 scrub: true,
             },
-            x: 0.9*imgSliderMain.offsetWidth,
+            x: 0.9 * imgSliderMain.offsetWidth,
             duration: 5,
             ease: 'power1.inOut',
             y: (index) => (index % 2 === 0 ? 50 : -50),
             rotation: (index) => (index % 2 === 0 ? 360 : -360),
         });
-        gsap.to('body', {
+        gsap.to(".black-bg", {
             backgroundColor: '#1d1d1b',
             scrollTrigger: {
                 trigger: "#main-slider-container",
-                start: 'top 50%',
-                end: '+=100%',
+                start: 'top 90%',
+                end: '+=30%',
                 scrub: true,
-                stagger:0.2,
-                duration:5,
-                
+                stagger: 0.3,
+                duration: 4,
             },
         });
         const getRandomPosition = () => Math.random() * imgSliderMain.offsetWidth;
-
-        
-    }
+    },
+    components: {  }
 };
 </script>
 
@@ -228,27 +166,28 @@ section>h1 {
     overflow-x: none;
 }
 .slider-container {
-    background-color: black;
+    background-color: transparent;
     position: absolute;
     display: flex;
     overflow: hidden;
-    height: 50vh;
+    height: 70vh;
     min-width: 100%;
     width: fit-content;
     align-items: flex-start;
-    border: 2px solid black;
+    /* border: 2px solid #cdc6be; */
 }
-.slider-container::before {
+.black-bg::before {
     content: "";
      background-image: url("src/assets/img/texture-bg.jpg") !important;
    /* Adjust the alpha value to set the opacity */
    position: fixed;
-   opacity: 0.2;
+   opacity: 0.3;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
    z-index: 0;
+   mix-blend-mode: multiply;
 }
 .slider-container>div {
     width: 1000px;
@@ -259,7 +198,7 @@ section>h1 {
     align-items: center;
     justify-content: center;
     color: #f6d13a;
-    border: 1px solid black;
+
 }
 
 

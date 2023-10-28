@@ -1,8 +1,11 @@
 <template>
     <!-- <CountDown v-if="show" :show="show" @close="show=false"/> -->
     <MainClone/>
-     <Section1/>
-     <Section2/>     
+    <PostCard/>
+     <div class="black-bg">
+        <Section1/>
+        <Section2/>     
+     </div>
 </template>
 
 <script>
@@ -11,6 +14,7 @@ import Section1 from './Section1.vue';
 import Section2 from './Section2.vue';
 import TextMorph from './TextMorph.vue';
 import CountDown from '../CountDown.vue';
+import PostCard from './PostCard.vue';
 
 
 export default {
@@ -25,6 +29,7 @@ export default {
     Section1,
     TextMorph,
     CountDown,
+    PostCard
 },
     beforeRouteLeave(to, from, next) {
         // Reset your component's state here
