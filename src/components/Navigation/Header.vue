@@ -1,7 +1,10 @@
 <template>
      <header class="v-header">
         
-            <div class="gl-canvas w-embed"><canvas id="above-canvas"></canvas></div>
+            <div class="gl-canvas w-embed">
+                <canvas id="above-canvas"></canvas>
+                <canvas id="below-canvas"></canvas>
+            </div>
             <Menu/>
                 <div class="top-nav w-screen">
                     <div class="logo-group pl-[7%] pr-[7%] select-none">
