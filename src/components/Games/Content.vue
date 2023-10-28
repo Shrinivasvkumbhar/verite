@@ -12,11 +12,40 @@
     width: 80%;
     margin: 10px;
 }
+
+.tagline {
+  background-color: #333;
+  color: #eee;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.tag {
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
 </style>
 
 <template>
     <Header/>
-  <h1 class="m-[40px] text-8xl text-center">Games</h1>
+    <div class="tagline">
+        <div class="tag">
+            <a href="/games/vertle">
+                Guess today's word in vertle!!
+            </a>
+        </div>
+    </div>
+    <h1 class="m-[20px] text-7xl text-center">Games</h1>
     <div class="flex flex-col w-screen justify-center items-center">
         <card class="card"
         v-for="(game, index) in games"

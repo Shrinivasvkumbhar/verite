@@ -43,7 +43,7 @@ export default {
 .svg-player {
     width: 50vw;
     clip-path: inset(0 0 0 40%);
-    margin-left: -20%;
+    margin-left: -40%;
 }
 
 .player-on {

@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "./components/Home/Home.vue";
 import Games from "./components/Games/Content.vue";
 import Test from "./components/Test.vue";
+import SecretCode from "./components/SecretCode.vue"
 import HomeWithPlayer from "./components/HomeWithPlayer.vue"
 const routes = [
     {
@@ -31,6 +32,11 @@ const routes = [
         path:'/leaderboard',
         name:'Test',
         component: Test,
+    },
+    {
+        path: '/games/vertle',
+        name: 'SecretCode',
+        component: SecretCode
     },
     {
         path:'/hp',

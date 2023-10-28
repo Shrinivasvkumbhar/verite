@@ -5,7 +5,13 @@
     <PostCard/>
      <div class="black-bg">
         <Section1/>
-        <Section2/>     
+        <!-- <span class="section-3">
+            <Player/>
+            <Poster/>
+        </span>
+        <div class="section-4">
+        </div> -->
+        <!-- <Section2/>      -->
      </div>
 </template>
 
@@ -16,6 +22,8 @@ import Section2 from './Section2.vue';
 import TextMorph from './TextMorph.vue';
 import CountDown from '../CountDown.vue';
 import PostCard from './PostCard.vue';
+import Player from '../VinylPlayer/Player.vue';
+import Poster from '../Poster.vue';
 
 
 export default {
@@ -26,15 +34,17 @@ export default {
         }
     },
     components: {
-    MainClone,
-    Section1,
-    TextMorph,
-    CountDown,
-    PostCard
-}
+        MainClone,
+        Section1,
+        Section2,
+        TextMorph,
+        CountDown,
+        PostCard,
+        Player,
+        Poster
+    }
 };
 </script>
 
-<style>
-
+<style scoped>
 </style>

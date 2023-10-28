@@ -73,14 +73,14 @@
         <!-- Image at the top with overlay text -->
         <div class="card-image-container">
             <img :src="game.image" alt="Card Image" class="card-image" />
-            <span class="overlay-text">The Game</span>
+            <!-- <span class="overlay-text">The Game</span> -->
         </div>
 
         <!-- Left-aligned details -->
         <div class="card-details">
             <h2 class="card-title">{{ game.name }}</h2>
             <p class="card-description">{{ game.about }}</p>
-            <p class="no-of-participants">No. of participants: {{ game.no_of_participants_per_team }}</p>
+            <p class="no-of-participants">Deadline: {{ game.date }}</p>
             <button class="details-btn" @click="showModal = true">Details</button>
         </div>
 
@@ -92,10 +92,11 @@
             <h2>{{game.name}}</h2>
             </template>
             <template #body>
-                <h4>{{game.about}}</h4>
+              <img :src="game.image"/>
+                <!-- <h4>{{game.about}}</h4>
                 <p v-for="(rule, ind) in game.rules">
                     {{ ind+1 }}. {{ rule }}
-                </p>
+                </p> -->
             </template>
         </modal>
         </Teleport>
