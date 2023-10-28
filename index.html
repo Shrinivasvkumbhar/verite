@@ -18,13 +18,14 @@
     <script type="module">
       import {gsap} from "gsap";
       import PaperCurtainEffect from "./src/assets/js/paperCurtain.js";
-      const isMobile = false
+      window.addEventListener("load",()=>{
+        const isMobile = false
       const isHorizontal = false
 
       const belowCanvas = document.querySelector("#below-canvas");
       const aboveCanvas = document.querySelector("#above-canvas");
 
-      // console.log('canvas: ', aboveCanvas);
+      console.log('canvas: ', aboveCanvas);
       // console.log('is Horizontal: ', isHorizontal && !isMobile)
 
       const paperCurtainEffect = new PaperCurtainEffect(aboveCanvas, {
@@ -222,6 +223,7 @@
       //   );
       // });
       document.querySelector(".hamburger").addEventListener("click", onNavClick);
+      })
     </script>
   </head>
   <body>
