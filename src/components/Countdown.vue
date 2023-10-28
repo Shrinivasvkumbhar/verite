@@ -8,7 +8,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #161616;
     /* display: flex; */
     animation: opacity 0.3s ease;
 }
@@ -32,6 +32,8 @@
 .television {
     position: relative;
     display: flex;
+    height: 100vh;
+    width:100vw;
 }
 
 .tv-static {
@@ -61,8 +63,14 @@
 }
 
 .countdown {
-  animation: glitch 1s linear infinite;
+  /* animation: glitch 1s linear infinite; */
   color: snow;
+  display: flex;
+  color:rgb(14, 249, 14);
+  text-shadow: 0px 0px 200px #BEB5AB,
+                    0px 0px 100px #BEB5AB,
+                    0px 0px 25px #FFFA;
+
 }
 
 @keyframes glitch {
@@ -111,15 +119,42 @@
 @keyframes glitchBotom{
   2%,64%{
     transform: translate(-2px,0);
+    transform: rotatey(15deg);
+
   }
   4%,60%{
     transform: translate(-2px,0);
+    transform: rotatey(15deg);
+
   }
   62%{
     transform: translate(-22px,5px) skew(21deg); 
+    transform: rotatey(15deg);
+
   }
 }
-
+.show-time{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  transform: rotatey(35deg);
+  font-size:6.5vw;
+  position: relative;
+  left: -10%;
+}
+.time,.label{
+  text-align: center;
+  
+}
+.label{
+  font-size: x-large;
+ writing-mode: vertical-lr;
+ text-orientation: upright;
+  letter-spacing: -0.2em;
+ height: 20px;
+ text-align: center;
+ margin-top: 45px;
+}
 /* .countdown-enter-from {
   opacity: 0;
 }
@@ -137,51 +172,102 @@
 </style>
 
 <template>
-    <Transition name="countdown">
-        <div v-if="show" class="content-mask">
+       
+        <div  class="content-mask tv-mask"  ref="tv">
             <div class="content">
+                  <!-- <audio controls autoplay>
+                    <source src="../assets/music/Doordarshan.mp3" type="audio/mpeg">
+                  </audio> -->
                 <div class="television">
-                    <svg class="television" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60" xml:space="preserve" width="512px" height="512px" fill="#000000">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.12"/>
-                        <g id="SVGRepo_iconCarrier"> 
-                            <rect x="5" y="51.5" style="fill:#BFA380;" width="50" height="3"/> 
-                            <path style="fill:#CFC6A8;stroke:#6B5B4B;stroke-width:2;stroke-miterlimit:10;" d="M57.726,51.5H2.274C1.57,51.5,1,50.93,1,50.226 V7.774C1,7.07,1.57,6.5,2.274,6.5h55.452C58.43,6.5,59,7.07,59,7.774v42.452C59,50.93,58.43,51.5,57.726,51.5z"/> 
-                            <rect x="48" y="30.5" style="fill:#777a7c;" width="4" height="4"/> 
-                            <rect x="52" y="30.5" style="fill:#E7ECED;" width="4" height="4"/> 
-                            <path style="fill:#6B5B4B;" d="M55,23.5h-6c-0.553,0-1-0.447-1-1s0.447-1,1-1h6c0.553,0,1,0.447,1,1S55.553,23.5,55,23.5z"/> 
-                            <path style="fill:#6B5B4B;" d="M55,20.5h-6c-0.553,0-1-0.447-1-1s0.447-1,1-1h6c0.553,0,1,0.447,1,1S55.553,20.5,55,20.5z"/> 
-                            <path style="fill:#6B5B4B;" d="M55,17.5h-6c-0.553,0-1-0.447-1-1s0.447-1,1-1h6c0.553,0,1,0.447,1,1S55.553,17.5,55,17.5z"/> 
-                            <path style="fill:#6B5B4B;" d="M55,14.5h-6c-0.553,0-1-0.447-1-1s0.447-1,1-1h6c0.553,0,1,0.447,1,1S55.553,14.5,55,14.5z"/> 
-                            <path style="fill:#546A79;" @click="$emit('close')" d="M53,41.5c0-0.553,0.447-1,1-1h1.859c-0.446-1.722-1.997-3-3.859-3c-2.209,0-4,1.791-4,4 c0,2.209,1.791,4,4,4c1.862,0,3.412-1.278,3.859-3H54C53.447,42.5,53,42.053,53,41.5z"/> 
-                            <path style="fill:#E7ECED;" d="M55.859,40.5H54c-0.553,0-1,0.447-1,1s0.447,1,1,1h1.859c0.083-0.321,0.141-0.653,0.141-1 S55.942,40.821,55.859,40.5z"/> 
-                            <path style="fill:#283238;" d="M8.455,10.5C6.547,10.5,5,12.047,5,13.955v30.089C5,45.953,6.547,47.5,8.455,47.5H24v-37H8.455z"/> 
-                            <path style="fill:#283238;" d="M41.545,10.5H26v37h15.545c1.908,0,3.455-1.547,3.455-3.455V13.955 C45,12.047,43.453,10.5,41.545,10.5z"/> 
-                            <rect x="24" y="10.5" style="fill:#546A79;" width="2" height="37"/> 
-                            <path style="fill:#546A79;" d="M9,43.5c-0.553,0-1-0.447-1-1v-7c0-0.553,0.447-1,1-1s1,0.447,1,1v7C10,43.053,9.553,43.5,9,43.5z"/> <path style="fill:#546A79;" d="M41,23.5c-0.553,0-1-0.447-1-1v-7c0-0.553,0.447-1,1-1s1,0.447,1,1v7C42,23.053,41.553,23.5,41,23.5z "/> <circle style="fill:#FFFFFF;" cx="37" cy="22.5" r="1"/> </g>
-                    </svg>
-                    <img class="tv-static" src="/src/assets/static.gif"/>
+                   <img  @click="closeAnimation()" src="../assets/img/tv-dark.png" alt="" class="television">
+                    <!-- <img class="tv-static" src="/src/assets/gif/glitch.gif"/> -->
                     <span class="countdown" :title="countdown">
                         {{ countdown }}
                     </span>
-                    <span class="countdown-label">Days Hours Minutes Seconds</span>
+                    <span class="countdown-label"></span>
+                    
                 </div>
             </div>
         </div>
-    </Transition>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script >
+import { ref,onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { Howl } from 'howler';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const props = defineProps({
-  show: Boolean
-})
+gsap.registerPlugin(ScrollTrigger);
+export default{
+  data()
+  {
+    return{
+      isAudioInitialized:false,
+      sound:null,
+    }
+  },
+mounted(){
+  this.timer()
+  const tv = document.querySelector(".television");
+ document.addEventListener("mousemove",()=>{
+  //this.initializeAudioContext();
+ })
+  gsap.fromTo(
+    tv,
+    {
+      opacity: 0,
 
-const targetTime = new Date("Nov 10, 2023 00:00:00");
-let countdown = ref("");
+    },
+    {
+      opacity: 1,
 
-function startCountDown() {
+      duration: 4,
+      delay: 0.5,
+      stagger: 0.4,
+    }
+  );
+},
+methods:{
+  initializeAudioContext() {
+    console.log("play");
+      if (!this.isAudioInitialized) {
+        
+        this.sound = new Howl({
+          src: ['src/assets/music/Doordarshan.mp3'],
+          autoplay: true,
+          loop: true,
+          volume: 0.5,
+        });
+        this.isAudioInitialized=true;
+        console.log("playing...");
+      }
+      
+    },
+    closeAnimation() {
+      const tv = document.querySelector(".tv-mask");
+ 
+      gsap.to(tv, {
+        scale: 3,
+        duration: 2,
+        top:"95%",
+        left:"90%",
+        onComplete: () => {
+          this.$emit('close')
+          if (this.sound) {
+            this.sound.pause();
+          }
+        },
+      });
+     
+    },
+
+  timer()
+  {
+    setInterval(() => { this.startCountDown() }, 500);
+  },
+
+  startCountDown() {
+    const targetTime = new Date("Nov 10, 2023 00:00:00");
     const timeNow = new Date().getTime();
     const timeDifference = targetTime - timeNow;
     const millisecondsInOneSecond = 1000;
@@ -196,29 +282,44 @@ function startCountDown() {
     const remainingHours = (Math.floor(remainderDifferenceInHours) < 10) ? `0${Math.floor(remainderDifferenceInHours)}` : Math.floor(remainderDifferenceInHours);
     const remainingMinutes = (Math.floor(remainderDifferenceInMinutes) < 10) ? `0${Math.floor(remainderDifferenceInMinutes)}` : Math.floor(remainderDifferenceInMinutes);
     const remainingSeconds = (Math.floor(remainderDifferenceInSeconds) < 10) ? `0${Math.floor(remainderDifferenceInSeconds)}` : Math.floor(remainderDifferenceInSeconds);
-
-    countdown.value = remainingDays + " : " + remainingHours + " : " + remainingMinutes + " : " + remainingSeconds;
+    
+    const timer=document.querySelector('.countdown');
+    if(timer!=null)
+      timer.innerHTML = `
+      <div class="show-time">
+          <div class="time">
+            ${remainingDays}
+          </div>
+          <div class="label">
+            DAYS
+          </div>
+      </div>
+      <div class="show-time">
+          <div class="time">
+            ${remainingHours}
+          </div>
+          <div class="label">
+            HRS
+          </div>
+      </div>
+      <div class="show-time">
+          <div class="time">
+            ${remainingMinutes}
+          </div>
+          <div class="label">
+            MINS
+          </div>
+      </div>
+      <div class="show-time">
+          <div class="time">
+            ${remainingSeconds}
+          </div>
+          <div class="label">
+            SECS
+          </div>
+      </div>`;
 }
-
-setInterval(() => { startCountDown() }, 500);
-
+}
+}
 </script>
 
-
-<!-- <style>
-.title {
-    color: #333;
-}
-</style>
-
-<template>
-    <h1 class="title" @click="showCountDown = true" >CountDown</h1>
-    <Content :show="showCountDown" @close="showCountDown = false"/>
-</template>
-  
-<script setup>
-import { ref } from 'vue';
-import Content from './CountDown/Content.vue';
-
-const showCountDown = ref(false);
-</script> -->

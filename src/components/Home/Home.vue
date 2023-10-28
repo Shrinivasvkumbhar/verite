@@ -5,7 +5,7 @@
     <PostCard/>
      <div class="black-bg">
         <Section1/>
-        <Section2/>     
+        <!-- <Section2/>      -->
      </div>
 </template>
 
@@ -30,7 +30,8 @@ export default {
     Section1,
     TextMorph,
     CountDown,
-    PostCard
+    PostCard,
+    Section2
 }
 };
 </script>

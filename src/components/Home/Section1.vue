@@ -3,8 +3,11 @@
        
     
         <section class="section1" id="main-slider-container">
+            <div class="torn-paper w-screen absolute top-[-80px] z-50 sm:top-[-100px]" >
+                <img class="w-screen h-48 z-50" src="../../assets/img/paper-torn.png" alt="" srcset="">
+            </div>
             <div id="slider-container" class="slider-container" ref="sliderContainer">
-                <div class="flex">
+                <div class="flex !items-start">
                     <div class="banner-text flex flex-col w-[90%] !items-start p-10">
                     <div class="flex flex-col w-2/5">
                         <div class="button-74 !bg-[#fec5fb] w-40 text-center z-10 small-btn">
@@ -14,12 +17,12 @@
                                 the Vintage Aura
                             </div>
                     </div>
-                    <div class="text-[2.5vw] w-3/4 mt-5">
+                    <div class="text-[2.5vw] w-3/4 mt-10">
                         A Retro Ride to the Past, Where Memories Unfold.
                     </div>
                     </div>
-                    <div class="banner-retro">
-                        <img src="../../assets/svg/retro.svg" alt="">
+                    <div class="banner-retro w-[60%] absolute right-0 ">
+                        <img class="z-3" src="../../assets/svg/retro-stripes.svg" alt="">
                     </div>
                 </div>
                 <div class="!w-[300vw] banner-text">
@@ -27,11 +30,11 @@
                     <h1 class="about !bg-transparent">Dive into the timeless enchantment of <span class="button-74 small-btn !bg-[#0ae448] !text-[4vw] !text-black rotate-[6.5deg] !p-5" ref="verite">Verité</span> where <span class="button-74 small-btn !p-5 gradient-btn-1 !text-[4vw] relative bottom-10">cherished</span><span class="button-74 small-btn !p-5 gradient-btn-2 !text-[4vw] !shadow-none rotate-[15deg] relative right-5 z-[-1]">memories</span> and vibrant echoes of yesteryears</h1>
                 </div>
                 <div>
-                    <img src="../../assets/img/casette.jpg" />
+                    <!-- <img src="../../assets/img/casette.jpg" /> -->
                     <!-- <h1>cAssette PlayEr</h1> -->
                 </div>
                 <div>
-                    <img src="../../assets/img/gramaphone.jpg" />
+                    <!-- <img src="../../assets/img/gramaphone.jpg" /> -->
                     <!-- <h1>vespA</h1> -->
                 </div>
                 <div>
