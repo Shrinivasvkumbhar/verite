@@ -56,10 +56,10 @@
             <div id="slider-container" class="slider-container" ref="sliderContainer">
                 <div class="banner-text flex flex-col !items-start p-10">
                     <div class="flex flex-col w-2/5">
-                        <div class="button-74 !bg-[#fec5fb] w-40 z-10 small-btn">
+                        <div class="button-74 !bg-[#fec5fb] w-40 text-center z-10 small-btn">
                             Embrace
                         </div>
-                         <div class="button-74 !bg-[#ff8709] !text-[35px] ml-10">
+                         <div class="button-74 !bg-[#ff8709] !text-[35px] w-full ml-10">
                                 the Vintage Aura
                             </div>
                     </div>
@@ -178,7 +178,18 @@ export default {
             y: (index) => (index % 2 === 0 ? 50 : -50),
             rotation: (index) => (index % 2 === 0 ? 360 : -360),
         });
-
+        gsap.to('body', {
+            backgroundColor: '#1d1d1b',
+            scrollTrigger: {
+                trigger: "#main-slider-container",
+                start: 'top 50%',
+                end: '+=100%',
+                scrub: true,
+                stagger:0.2,
+                duration:5,
+                
+            },
+        });
         const getRandomPosition = () => Math.random() * imgSliderMain.offsetWidth;
 
         
