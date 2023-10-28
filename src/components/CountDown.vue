@@ -8,7 +8,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #161616;
     /* display: flex; */
     animation: opacity 0.3s ease;
 }
@@ -137,7 +137,7 @@
   display: flex;
   flex-direction: row;
   align-items: start;
-  transform: rotatey(25deg);
+  transform: rotatey(35deg);
   font-size:6.5vw;
   position: relative;
   left: -10%;
@@ -172,11 +172,14 @@
 </style>
 
 <template>
-    <Transition name="countdown" >
-        <div v-if="show" class="content-mask"  ref="tv">
+       
+        <div  class="content-mask tv-mask"  ref="tv">
             <div class="content">
+                  <!-- <audio controls autoplay>
+                    <source src="../assets/music/Doordarshan.mp3" type="audio/mpeg">
+                  </audio> -->
                 <div class="television">
-                   <img  @click="$emit('close')" src="../assets/img/tv-dark.jpg" alt="" class="television">
+                   <img  @click="closeAnimation()" src="../assets/img/tv-dark.png" alt="" class="television">
                     <!-- <img class="tv-static" src="/src/assets/gif/glitch.gif"/> -->
                     <span class="countdown" :title="countdown">
                         {{ countdown }}
@@ -186,24 +189,85 @@
                 </div>
             </div>
         </div>
-    </Transition>
 </template>
 
-<script setup>
+<script >
 import { ref,onMounted } from 'vue';
 import { gsap } from 'gsap';
-// import { Howl } from 'howler';
+import { Howl } from 'howler';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-const props = defineProps({
-  show: Boolean
-})
+export default{
+  data()
+  {
+    return{
+      isAudioInitialized:false,
+      sound:null,
+    }
+  },
+mounted(){
+  this.timer()
+  const tv = document.querySelector(".television");
+ document.addEventListener("mousemove",()=>{
+  //this.initializeAudioContext();
+ })
+  gsap.fromTo(
+    tv,
+    {
+      opacity: 0,
 
-const targetTime = new Date("Nov 10, 2023 00:00:00");
-;
+    },
+    {
+      opacity: 1,
 
-function startCountDown() {
+      duration: 4,
+      delay: 0.5,
+      stagger: 0.4,
+    }
+  );
+},
+methods:{
+  initializeAudioContext() {
+    console.log("play");
+      if (!this.isAudioInitialized) {
+        
+        this.sound = new Howl({
+          src: ['src/assets/music/Doordarshan.mp3'],
+          autoplay: true,
+          loop: true,
+          volume: 0.5,
+        });
+        this.isAudioInitialized=true;
+        console.log("playing...");
+      }
+      
+    },
+    closeAnimation() {
+      const tv = document.querySelector(".tv-mask");
+ 
+      gsap.to(tv, {
+        scale: 3,
+        duration: 2,
+        top:"95%",
+        left:"90%",
+        onComplete: () => {
+          this.$emit('close')
+          if (this.sound) {
+            this.sound.pause();
+          }
+        },
+      });
+     
+    },
+
+  timer()
+  {
+    setInterval(() => { this.startCountDown() }, 500);
+  },
+
+  startCountDown() {
+    const targetTime = new Date("Nov 10, 2023 00:00:00");
     const timeNow = new Date().getTime();
     const timeDifference = targetTime - timeNow;
     const millisecondsInOneSecond = 1000;
@@ -218,71 +282,44 @@ function startCountDown() {
     const remainingHours = (Math.floor(remainderDifferenceInHours) < 10) ? `0${Math.floor(remainderDifferenceInHours)}` : Math.floor(remainderDifferenceInHours);
     const remainingMinutes = (Math.floor(remainderDifferenceInMinutes) < 10) ? `0${Math.floor(remainderDifferenceInMinutes)}` : Math.floor(remainderDifferenceInMinutes);
     const remainingSeconds = (Math.floor(remainderDifferenceInSeconds) < 10) ? `0${Math.floor(remainderDifferenceInSeconds)}` : Math.floor(remainderDifferenceInSeconds);
-    document.querySelector('.countdown').innerHTML = `
-    <div class="show-time">
-        <div class="time">
-          ${remainingDays}
-        </div>
-        <div class="label">
-          DAYS
-        </div>
-    </div>
-    <div class="show-time">
-        <div class="time">
-          ${remainingHours}
-        </div>
-        <div class="label">
-          HRS
-        </div>
-    </div>
-    <div class="show-time">
-        <div class="time">
-          ${remainingMinutes}
-        </div>
-        <div class="label">
-          MINS
-        </div>
-    </div>
-    <div class="show-time">
-        <div class="time">
-          ${remainingSeconds}
-        </div>
-        <div class="label">
-          SECS
-        </div>
-    </div>`;
+    
+    const timer=document.querySelector('.countdown');
+    if(timer!=null)
+      timer.innerHTML = `
+      <div class="show-time">
+          <div class="time">
+            ${remainingDays}
+          </div>
+          <div class="label">
+            DAYS
+          </div>
+      </div>
+      <div class="show-time">
+          <div class="time">
+            ${remainingHours}
+          </div>
+          <div class="label">
+            HRS
+          </div>
+      </div>
+      <div class="show-time">
+          <div class="time">
+            ${remainingMinutes}
+          </div>
+          <div class="label">
+            MINS
+          </div>
+      </div>
+      <div class="show-time">
+          <div class="time">
+            ${remainingSeconds}
+          </div>
+          <div class="label">
+            SECS
+          </div>
+      </div>`;
 }
-
-setInterval(() => { startCountDown() }, 500);
-
-    // Close animation
-    // function closeAnimation() {
-    //   gsap.to([tv, timer], {
-    //     scale: 0,
-    //     duration: 1,
-    //     onComplete: () => {
-    //       sound.stop();
-    //     },
-    //   });
-    // }
-
+}
+}
 </script>
 
-
-<!-- <style>
-.title {
-    color: #333;
-}
-</style>
-
-<template>
-    <h1 class="title" @click="showCountDown = true" >CountDown</h1>
-    <Content :show="showCountDown" @close="showCountDown = false"/>
-</template>
-  
-<script setup>
-import { ref } from 'vue';
-import Content from './CountDown/Content.vue';
-
-const showCountDown = ref(false);
-</script> -->
