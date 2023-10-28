@@ -1,8 +1,8 @@
 <template>
     <MainClone/>
+    <Section1/>
     <Player />
-     <Section1/>
-     <Section2/>     
+     <!-- <Section2/>      -->
 </template>
 
 <script>
