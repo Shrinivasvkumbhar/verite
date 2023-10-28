@@ -4,7 +4,8 @@
     
         <section class="section1" id="main-slider-container">
             <div id="slider-container" class="slider-container" ref="sliderContainer">
-                <div class="banner-text flex flex-col !items-start p-10">
+                <div class="flex">
+                    <div class="banner-text flex flex-col w-[90%] !items-start p-10">
                     <div class="flex flex-col w-2/5">
                         <div class="button-74 !bg-[#fec5fb] w-40 text-center z-10 small-btn">
                             Embrace
@@ -15,6 +16,10 @@
                     </div>
                     <div class="text-[2.5vw] w-3/4 mt-5">
                         A Retro Ride to the Past, Where Memories Unfold.
+                    </div>
+                    </div>
+                    <div class="banner-retro">
+                        <img src="../../assets/svg/retro.svg" alt="">
                     </div>
                 </div>
                 <div class="!w-[300vw] banner-text">
