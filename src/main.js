@@ -13,9 +13,14 @@ const routes = [
         component: Home
     },
     {
+        path: '/test',
+        name: 'Test',
+        component: Test
+    },
+    {
         path: '/games',
         name: 'Games',
-        component: Test
+        component: Games
     },
     {
         path: '/blogs',
@@ -34,7 +39,7 @@ const routes = [
     }
 ]
 const router = createRouter({
-    history: createWebHistory('/'),
+    history: createWebHistory("/"),
     routes
 })
 createApp(App).use(router).mount('#app')

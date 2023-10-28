@@ -25,11 +25,7 @@ import { ref, onMounted, watch } from 'vue';
 import { gsap } from 'gsap';
 
 export default {
-    beforeRouteLeave(href, from, next) {
-        // Reset your component's state here
-        console.log(href);
-        next();
-    },
+    
 }
 </script>
 

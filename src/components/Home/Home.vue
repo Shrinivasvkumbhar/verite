@@ -1,4 +1,5 @@
 <template>
+    <div class="paper-bg"></div>
     <!-- <CountDown v-if="show" :show="show" @close="show=false"/> -->
     <MainClone/>
     <PostCard/>
@@ -30,13 +31,7 @@ export default {
     TextMorph,
     CountDown,
     PostCard
-},
-    beforeRouteLeave(to, from, next) {
-        // Reset your component's state here
-        console.log(to);
-        //this.resetState();
-      next();
-    },
+}
 };
 </script>
 

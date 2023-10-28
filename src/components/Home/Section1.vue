@@ -73,7 +73,6 @@ export default {
                 trigger: ".banner-text",
                 start: "top+=450px ",
                 end: "+=450px",
-                markers: true,
                 // scrub: true,
                 toggleActions: "play none none none"
             }
@@ -176,18 +175,11 @@ section>h1 {
     align-items: flex-start;
     /* border: 2px solid #cdc6be; */
 }
-.black-bg::before {
+.black-bg{
     content: "";
-     background-image: url("src/assets/img/texture-bg.jpg") !important;
+     /* background-image: url("src/assets/img/texture-bg.jpg") !important; */
    /* Adjust the alpha value to set the opacity */
-   position: fixed;
-   opacity: 0.3;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 0;
-   mix-blend-mode: multiply;
+  
 }
 .slider-container>div {
     width: 1000px;
