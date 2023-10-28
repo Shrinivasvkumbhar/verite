@@ -16,7 +16,7 @@
   width: 500px;
   margin: auto;
   padding: 20px 30px;
-  background-color: #000;
+  background-color: #222;
   color: #DDD;
   background-image: url("/src/assets/paper-background.jpg");
   border-radius: 2px;
@@ -37,6 +37,7 @@
   float: right;
   border-radius: 0;
   border: 1px solid #DDD;
+  padding: 5px;
   width: 60px;
 }
 
@@ -78,7 +79,7 @@
 
         <div class="modal-footer">
           <slot name="footer">
-            default footer
+            
             <button
               class="modal-default-button"
               @click="$emit('close')"
