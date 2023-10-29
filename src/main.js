@@ -7,6 +7,13 @@ import Games from "./components/Games/Content.vue";
 import Test from "./components/Test.vue";
 import SecretCode from "./components/SecretCode.vue"
 import HomeWithPlayer from "./components/HomeWithPlayer.vue"
+import GamesEdit from "./components/admin/GamesEdit.vue";
+import Login from "./components/admin/Login.vue";
+import { getAuth } from 'firebase/auth';
+import { setPersistence, browserSessionPersistence } from 'firebase/auth';
+// Set up persistence
+const auth = getAuth();
+setPersistence(auth, browserSessionPersistence);
 const routes = [
     {
         path: '/',
@@ -42,10 +49,32 @@ const routes = [
         path:'/hp',
         name:'HomeWithPlayer',
         component: HomeWithPlayer
+    },
+    {
+        path:'/admin',
+        component: GamesEdit,
+        meta: {
+            requiresAuth: true,
+        },
+    },
+    {
+        path:'/login',
+        component:Login
     }
 ]
 const router = createRouter({
     history: createWebHistory("/"),
     routes
 })
+router.beforeEach((to, from, next) => {
+    //const auth = getAuth();
+    const currentUser = auth.currentUser;
+    const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+
+    if (requiresAuth && !currentUser) {
+        next('/login');
+    } else {
+        next();
+    }
+});
 createApp(App).use(router).mount('#app')

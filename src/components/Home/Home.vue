@@ -5,12 +5,12 @@
     <PostCard/>
      <div class="black-bg">
         <Section1/>
-        <!-- <span class="section-3">
+        <span class="section-3">
             <Player/>
             <Poster/>
         </span>
         <div class="section-4">
-        </div> -->
+        </div>
         <!-- <Section2/>      -->
      </div>
 </template>
