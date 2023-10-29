@@ -117,7 +117,7 @@ export default {
         Modal
     },
   props: {
-    game:Object,
+    game: Object,
   },
 };
 </script>

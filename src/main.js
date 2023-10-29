@@ -5,8 +5,10 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "./components/Home/Home.vue";
 import Games from "./components/Games/Content.vue";
 import Test from "./components/Test.vue";
-import SecretCode from "./components/SecretCode.vue"
-import HomeWithPlayer from "./components/HomeWithPlayer.vue"
+import SecretCode from "./components/SecretCode.vue";
+import HomeWithPlayer from "./components/HomeWithPlayer.vue";
+import Teams from "./components/Teams/Teams.vue";
+import Team from "./components/Teams/Team.vue";
 import GamesEdit from "./components/admin/GamesEdit.vue";
 import Login from "./components/admin/Login.vue";
 import { getAuth } from 'firebase/auth';
@@ -34,6 +36,16 @@ const routes = [
         path: '/blogs',
         name: 'Blogs',
         component: Test
+    },
+    {
+        path: '/teams',
+        name: 'Teams',
+        component: Teams
+    },
+    {
+        path: '/team/:name',
+        name: 'Team',
+        component: Team
     },
     {
         path:'/leaderboard',

@@ -1,0 +1,522 @@
+[
+    {
+      "name": "baazigar",
+      "tagline": "Give up on your dream and die!",
+      "logo": "/vite.svg",
+      "captains": [
+        {
+          "name": "Reshma Sankar Thekkepatt",
+          "photo": "pager.jpg"
+        },
+        {
+          "name": "Saji C S",
+          "photo": "captain2.jpg"
+        }
+      ],
+      "members": [
+        {
+          "name": "Nevin Perumana",
+          "photo": "member1.jpg"
+        },
+        {
+          "name": "Veena Nair",
+          "photo": "member2.jpg"
+        },
+        {
+          "name": "Sree Lakshmi E M",
+          "photo": "member3.jpg"
+        },
+        {
+          "name": "Nimith NA",
+          "photo": "member4.jpg"
+        },
+        {
+          "name": "Abdul Bijur V A",
+          "photo": "member5.jpg"
+        },
+        {
+          "name": "Nithya Mohan",
+          "photo": "member6.jpg"
+        },
+        {
+          "name": "Pratheek Mammen John",
+          "photo": "member7.jpg"
+        },
+        {
+          "name": "Manuprasad S",
+          "photo": "member8.jpg"
+        },
+        {
+          "name": "Vishnu Ganeshan",
+          "photo": "member9.jpg"
+        },
+        {
+          "name": "Jince Martin Kalarickal",
+          "photo": "member10.jpg"
+        },
+        {
+          "name": "Sruthi Cheruparamadathil",
+          "photo": "member11.jpg"
+        },
+        {
+          "name": "Aju Viswanathan",
+          "photo": "member12.jpg"
+        },
+        {
+          "name": "Jaison Philip Jacob",
+          "photo": "member13.jpg"
+        },
+        {
+          "name": "Asha P",
+          "photo": "member14.jpg"
+        },
+        {
+          "name": "Mohamed Aslam",
+          "photo": "member15.jpg"
+        },
+        {
+          "name": "Ramkrishna Yadav",
+          "photo": "member16.jpg"
+        },
+        {
+          "name": "Tharun Surendran",
+          "photo": "member17.jpg"
+        },
+        {
+          "name": "Arvind Bhandari",
+          "photo": "member18.jpg"
+        },
+        {
+          "name": "Pulkit Sachdeva",
+          "photo": "member19.jpg"
+        },
+        {
+          "name": "Priyanka S",
+          "photo": "member20.jpg"
+        },
+        {
+          "name": "Ashna Thomson",
+          "photo": "member21.jpg"
+        },
+        {
+          "name": "Steffi Joseph",
+          "photo": "member22.jpg"
+        },
+        {
+          "name": "Tasneem Dohadwala",
+          "photo": "member23.jpg"
+        },
+        {
+          "name": "Monish Ramappa Salian",
+          "photo": "member24.jpg"
+        },
+        {
+          "name": "Annie Jaimy",
+          "photo": "member25.jpg"
+        },
+        {
+          "name": "Amal Tomy",
+          "photo": "member26.jpg"
+        },
+        {
+          "name": "Gokul P Dinesh",
+          "photo": "member27.jpg"
+        },
+        {
+          "name": "Farhath Sulthana Jamal",
+          "photo": "member28.jpg"
+        },
+        {
+          "name": "Hridika K V",
+          "photo": "member29.jpg"
+        }
+      ]
+    },
+    {
+      "name": "don",
+      "tagline": "Give up on your dream and die!",
+      "logo": "/vite.svg",
+      "captains": [
+        {
+          "name": "Arun J Olickal",
+          "photo": "sooper-11.jpg"
+        },
+        {
+          "name": "Dhanu M Francis",
+          "photo": "captain2.jpg"
+        }
+      ],
+      "members": [
+        {
+          "name": "Shamsuddin T U",
+          "photo": "member1.jpg"
+        },
+        {
+          "name": "Jyoti C",
+          "photo": "member2.jpg"
+        },
+        {
+          "name": "Bharath S",
+          "photo": "member3.jpg"
+        },
+        {
+          "name": "Vishakh Raj",
+          "photo": "member4.jpg"
+        },
+        {
+          "name": "Geo Xavier",
+          "photo": "member5.jpg"
+        },
+        {
+          "name": "Anita Anna Paul",
+          "photo": "member6.jpg"
+        },
+        {
+          "name": "Joel George",
+          "photo": "member7.jpg"
+        },
+        {
+          "name": "Clinton NJ",
+          "photo": "member8.jpg"
+        },
+        {
+          "name": "Sreehari P",
+          "photo": "member9.jpg"
+        },
+        {
+          "name": "Sangeeth K S",
+          "photo": "member10.jpg"
+        },
+        {
+          "name": "Neeraj Singh",
+          "photo": "member11.jpg"
+        },
+        {
+          "name": "Rajesh Rajan",
+          "photo": "member12.jpg"
+        },
+        {
+          "name": "Rakhi J Nair",
+          "photo": "member13.jpg"
+        },
+        {
+          "name": "Kunal Agrawal",
+          "photo": "member14.jpg"
+        },
+        {
+          "name": "Fathima Kauzar N A",
+          "photo": "member15.jpg"
+        },
+        {
+          "name": "Ananda Krishnan Vijay",
+          "photo": "member16.jpg"
+        },
+        {
+          "name": "Ceeon Karian",
+          "photo": "member17.jpg"
+        },
+        {
+          "name": "Sesharaj Venkitaraman",
+          "photo": "member18.jpg"
+        },
+        {
+          "name": "Paul Xavier",
+          "photo": "member19.jpg"
+        },
+        {
+          "name": "Ambili Robin",
+          "photo": "member20.jpg"
+        },
+        {
+          "name": "Malvika S S",
+          "photo": "member21.jpg"
+        },
+        {
+          "name": "Vinod Sivashankaran",
+          "photo": "member22.jpg"
+        },
+        {
+          "name": "Chippy Mary John",
+          "photo": "member23.jpg"
+        },
+        {
+          "name": "Anjaly Neduvelil Shaji",
+          "photo": "member24.jpg"
+        },
+        {
+          "name": "Shyamkrishnan S N",
+          "photo": "member25.jpg"
+        },
+        {
+          "name": "Anand Ajith",
+          "photo": "member26.jpg"
+        },
+        {
+          "name": "Sophia Badusha",
+          "photo": "member27.jpg"
+        },
+        {
+          "name": "Rojer King Alex",
+          "photo": "member28.jpg"
+        }
+      ]
+    },
+    {
+        "name": "shakti",
+        "tagline": "Give up on your dream and die!",
+        "logo": "/vite.svg",
+        "captains": [
+          {
+            "name": "Akshay Rojan",
+            "photo": "/vite.svg"
+          },
+          {
+            "name": "Annie Anitha Alfred",
+            "photo": "captain2.jpg"
+          }
+        ],
+        "members": [
+          {
+            "name": "Jerrin Jos",
+            "photo": "member1.jpg"
+          },
+          {
+            "name": "Prajoth Kumar",
+            "photo": "member2.jpg"
+          },
+          {
+            "name": "Ravinder Kaur",
+            "photo": "member3.jpg"
+          },
+          {
+            "name": "Basil Benny",
+            "photo": "member4.jpg"
+          },
+          {
+            "name": "Arun Kunhikrishnan",
+            "photo": "member5.jpg"
+          },
+          {
+            "name": "Merrin Anna Benchamin",
+            "photo": "member6.jpg"
+          },
+          {
+            "name": "Rahul Hari",
+            "photo": "member7.jpg"
+          },
+          {
+            "name": "Vinayanand VP",
+            "photo": "member8.jpg"
+          },
+          {
+            "name": "Stuti Agarwal",
+            "photo": "member9.jpg"
+          },
+          {
+            "name": "Anjana Lakshmi G",
+            "photo": "member10.jpg"
+          },
+          {
+            "name": "Vipin C Kuriakose",
+            "photo": "member11.jpg"
+          },
+          {
+            "name": "John Joseph",
+            "photo": "member12.jpg"
+          },
+          {
+            "name": "Rahul B",
+            "photo": "member13.jpg"
+          },
+          {
+            "name": "Siddarth U Menon",
+            "photo": "member14.jpg"
+          },
+          {
+            "name": "Arockia Raj Vincent",
+            "photo": "member15.jpg"
+          },
+          {
+            "name": "Neethu Premraj E P",
+            "photo": "member16.jpg"
+          },
+          {
+            "name": "Abijith C G",
+            "photo": "member17.jpg"
+          },
+          {
+            "name": "Midhya N V",
+            "photo": "member18.jpg"
+          },
+          {
+            "name": "Priyadharshan B",
+            "photo": "member19.jpg"
+          },
+          {
+            "name": "Vivek Ninan Philipose",
+            "photo": "member20.jpg"
+          },
+          {
+            "name": "Saumya K N",
+            "photo": "member21.jpg"
+          },
+          {
+            "name": "Sriram S R",
+            "photo": "member22.jpg"
+          },
+          {
+            "name": "Sabarinath P M",
+            "photo": "member23.jpg"
+          },
+          {
+            "name": "Akshay D Kamath",
+            "photo": "member24.jpg"
+          },
+          {
+            "name": "Rohith Vinu",
+            "photo": "member25.jpg"
+          },
+          {
+            "name": "Salman Saifee",
+            "photo": "member26.jpg"
+          },
+          {
+            "name": "Rohith Prakash",
+            "photo": "member27.jpg"
+          },
+          {
+            "name": "Diya Naushad",
+            "photo": "member28.jpg"
+          }
+        ]
+    },
+    {
+        "name": "sholay",
+        "tagline": "Give up on your dream and die!",
+        "logo": "/vite.svg",
+        "captains": [
+          {
+            "name": "Muhammaed Anjal",
+            "photo": "pager.jpg"
+          },
+          {
+            "name": "Neethu Pallath",
+            "photo": "captain2.jpg"
+          }
+        ],
+        "members": [
+          {
+            "name": "Satheesh Satchit",
+            "photo": "member3.jpg"
+          },
+          {
+            "name": "Archana Sasikumar",
+            "photo": "member4.jpg"
+          },
+          {
+            "name": "Deepu James",
+            "photo": "member5.jpg"
+          },
+          {
+            "name": "Anoop Paul",
+            "photo": "member6.jpg"
+          },
+          {
+            "name": "Aswathy P.D",
+            "photo": "member7.jpg"
+          },
+          {
+            "name": "Ramesh Karangat",
+            "photo": "member8.jpg"
+          },
+          {
+            "name": "Binu Joseph",
+            "photo": "member9.jpg"
+          },
+          {
+            "name": "Dinesh Bhaskaran Nair",
+            "photo": "member10.jpg"
+          },
+          {
+            "name": "Sona P S",
+            "photo": "member11.jpg"
+          },
+          {
+            "name": "Vahajudheen T",
+            "photo": "member12.jpg"
+          },
+          {
+            "name": "Jisha M Ashokan",
+            "photo": "member13.jpg"
+          },
+          {
+            "name": "Melbin Joseph",
+            "photo": "member14.jpg"
+          },
+          {
+            "name": "Ayush Gupta",
+            "photo": "member15.jpg"
+          },
+          {
+            "name": "Nirun Murali",
+            "photo": "member16.jpg"
+          },
+          {
+            "name": "Bincy Babu",
+            "photo": "member17.jpg"
+          },
+          {
+            "name": "Bandi Sreekanth Reddy",
+            "photo": "member18.jpg"
+          },
+          {
+            "name": "Sunaina T K",
+            "photo": "member19.jpg"
+          },
+          {
+            "name": "Nijula P",
+            "photo": "member20.jpg"
+          },
+          {
+            "name": "Raji R",
+            "photo": "member21.jpg"
+          },
+          {
+            "name": "Salviya Babu",
+            "photo": "member22.jpg"
+          },
+          {
+            "name": "Vikas Acharya",
+            "photo": "member23.jpg"
+          },
+          {
+            "name": "Rinto Lazar",
+            "photo": "member24.jpg"
+          },
+          {
+            "name": "Rahul V Nair",
+            "photo": "member25.jpg"
+          },
+          {
+            "name": "Inder Methil",
+            "photo": "member26.jpg"
+          },
+          {
+            "name": "Gloria Momin",
+            "photo": "member27.jpg"
+          },
+          {
+            "name": "Sidharth Sreekumar",
+            "photo": "member28.jpg"
+          },
+          {
+            "name": "Sanath Chandran R",
+            "photo": "member29.jpg"
+          },
+          {
+            "name": "Biju George Varghese",
+            "photo": "member30.jpg"
+          }
+        ]
+    }
+]
