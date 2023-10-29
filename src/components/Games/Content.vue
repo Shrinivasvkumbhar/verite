@@ -38,6 +38,10 @@
 
 <template>
     <Header/>
+    <div class="paper-bg"></div>
+    <div class="banner-img h-screen">
+        <img src="../../assets/img/shaktiman.png" alt="" srcset="">
+    </div>
     <div class="tagline">
         <div class="tag">
             <a href="/games/vertle">

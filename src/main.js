@@ -11,6 +11,7 @@ import Teams from "./components/Teams/Teams.vue";
 import Team from "./components/Teams/Team.vue";
 import GamesEdit from "./components/admin/GamesEdit.vue";
 import Login from "./components/admin/Login.vue";
+import Leaderboard from "./components/Games/Leaderboard.vue";
 import { getAuth } from 'firebase/auth';
 import { setPersistence, browserSessionPersistence } from 'firebase/auth';
 // Set up persistence
@@ -50,7 +51,7 @@ const routes = [
     {
         path:'/leaderboard',
         name:'Test',
-        component: Test,
+        component: Leaderboard,
     },
     {
         path: '/games/vertle',

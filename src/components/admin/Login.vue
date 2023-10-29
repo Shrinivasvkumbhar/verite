@@ -40,6 +40,7 @@ label {
 </style>
 <template>
     <Header/>
+    <div class="paper-bg"></div>
     <div class="w-1/2 mx-auto my-10 border-[#1d1d1b] border-[1px] border-solid p-10 sm:w-[80%]">
         <h1>Login</h1>
         <div class="flex flex-col">
