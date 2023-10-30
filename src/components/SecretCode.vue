@@ -1,7 +1,5 @@
 <style>
-.secretcode {
-    height: 100vh;
-}
+
 </style>
 
 <template>

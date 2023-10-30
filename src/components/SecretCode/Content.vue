@@ -50,6 +50,13 @@
     justify-content: center;
     border: 1px solid #333;
 }
+@media screen and (max-width: 500px){
+    .key{
+        padding: 5px!important;
+        min-width: 28px;
+    min-height: 28px;
+    }
+}
 </style>
 
 <template>
@@ -63,7 +70,7 @@
                 </div> -->
             </div>
         </div>
-        <div class="keyboard">
+        <div class="keyboard sm:w-full">
             <div class="row">
                 <span class="key" v-for="key in keys[0]" :id="key" @click="addChar">
                 {{ key }}

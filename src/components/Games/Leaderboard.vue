@@ -4,8 +4,7 @@
 }
 h1{
     font-family: Canopee;
-    font-size: 4em;
-    text-align: center;
+    z-index: -1;
 }
 th{
     font-size: 3.5em;
@@ -17,13 +16,20 @@ th,td{
     padding: 10px;
     font-size: 2.5em;
 }
-
+@media screen and (max-width: 500px){
+    th,td{
+        font-size: 2em;
+    }
+}
 </style>
 <template>
     <Header/>
-    
-    <div class="w-1/2 mx-auto flex items-center flex-col">
-        <h1 class="mb-12">Leaderboard</h1>
+    <div class="paper-bg"></div>
+    <div class="banner-img w-screen absolute">
+        <img src="../../assets/img/trophy.png" alt="" srcset="">
+    </div>
+    <div class="w-1/2 mx-auto flex items-center flex-col  mt-[32%] sm:mt-[30%] mb-12">
+        <h1 class="mb-12 text-[10vw] text-center sm:text-7xl ">Leaderboard</h1>
         <table>
             <thead>
                 <th>Team</th>

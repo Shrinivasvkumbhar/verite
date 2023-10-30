@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 .container {
     display: flex;
     flex-direction: column;
@@ -34,22 +34,26 @@
     transform: translateX(-20%);
   }
 }
+h1{
+    font-family: Canopee;
+}
 </style>
 
 <template>
     <Header/>
     <div class="paper-bg"></div>
-    <div class="banner-img h-screen">
+    <div class="banner-img w-screen absolute">
         <img src="../../assets/img/shaktiman.png" alt="" srcset="">
     </div>
-    <div class="tagline">
-        <div class="tag">
+    <h1 class="m-[20px] text-[10vw] text-center mt-[32%] sm:text-7xl sm:mt-[30%]">Games</h1>
+    <div class="tagline z-2 relative">
+        <div class="tag z-50">
             <a href="/games/vertle">
                 Guess today's word in vertle!!
             </a>
         </div>
     </div>
-    <h1 class="m-[20px] text-7xl text-center">Games</h1>
+    
     <div class="flex flex-col w-screen justify-center items-center">
         <card class="card"
         v-for="(game, index) in games"

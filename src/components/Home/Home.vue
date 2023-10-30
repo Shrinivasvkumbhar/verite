@@ -3,12 +3,14 @@
     <!-- <CountDown v-if="show" :show="show" @close="show=false"/> -->
     <MainClone/>
     <PostCard/>
+
      <div class="black-bg">
+        <div class="paper-bg"></div>
         <Section1/>
-        <span class="section-3">
+        <section class="section-3">
             <Player/>
-            <Poster/>
-        </span>
+            <!-- <Poster/> -->
+        </section>
         <div class="section-4">
         </div>
         <!-- <Section2/>      -->
@@ -47,4 +49,7 @@ export default {
 </script>
 
 <style scoped>
+.section-3{
+    margin: 0 50px;
+}
 </style>

@@ -119,11 +119,23 @@ fill: #754c24;
 .cls-10 {
 fill: #f2f2f2;
 }
+.vinyl-player{
+  background-color: #cdc6be06;
+  border: 1px solid #cdc6be;
+  overflow: hidden;
+  border-radius: 30px;
+}
 </style>
 
 <template>
-  <div class=""></div>
-<svg id="Layer_2" class="svg-player" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 977 764.5">
+  <div class="h-full vinyl-wrap overflow-hidden relative">
+    <img src="../../assets/img/vinyl.png" id="groove" :class="{ 'spin-groove': isPlaying }" class=" relative left-[-20%] top-[-15%] h-[145%]" alt="" srcset="">
+    <div @click="toggleAudio" class="controls absolute top-0 right-0 h-5 p-4">
+      <img v-if="!isPlaying" src="../../assets/img/play.png" alt="">
+      <img v-else src="../../assets/img/pause.png" alt="">
+    </div>
+  </div>
+<!-- <svg id="Layer_2" class="svg-player" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 977 764.5">
   <g id="Layer_2-2" data-name="Layer 2">
     <g>
       <rect class="cls-9" y="2.5" width="977" height="762" rx="63.89" ry="63.89"/>
@@ -132,7 +144,7 @@ fill: #f2f2f2;
       <rect class="cls-10" x="768" y="154.5" width="96" height="482"/>
       <image width="761" height="760" href="../../assets/svg/vinylplayer/Disc.svg" alt="Groove"/>
       <image width="761" height="760" id="groove" :class="{'spin-groove': isPlaying}" href="../../assets/svg/vinylplayer/Groove.svg" alt="Groove"/>
-      <!-- <image width="761" height="760" id="groove" :class="{'spin-groove': isPlaying}" href="../../assets/img/disc.png" alt="Groove"/> -->
+      <image width="761" height="760" id="groove" :class="{'spin-groove': isPlaying}" href="../../assets/img/disc.png" alt="Groove"/>
       <circle class="cls-7" cx="390" cy="380.5" r="125"/>
       <path class="cls-5" d="M534,574.5l55-41-11-21,15-9,13,17s14-9,25-19,28-34,28-34l27,16s-23,37-24,41-2,17,4,23,13,14,13,14l-21-12c-7-4-32,6-51,17s-53,29-53,29l-20-21Z"/>
       <polygon class="cls-2" points="662.54 469.6 791 259.5 810 270.5 682.09 481.18 662.54 469.6"/>
@@ -144,5 +156,5 @@ fill: #f2f2f2;
       <circle class="cls-3" :class="{'light-on': isPlaying}" cx="848.5" cy="73.5" r="7"/>
     </g>
   </g>
-</svg>
+</svg> -->
 </template>
