@@ -14,16 +14,46 @@
 }
 
 .tagline {
-  background-color: #333;
+  background-color: #222;
   color: #eee;
   padding: 10px;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  position: sticky;
+  top: 100px;
+  z-index: 5;
 }
 
 .tag {
-    animation: marquee 30s linear infinite;
+    font-family: Canopee;
+    font-size: 2.5vw;
+    animation: marquee 20s linear infinite;
+}
+
+.tagline:hover {
+  animation: glow 1s infinite ease-in-out;
+}
+
+.tag a {
+    color: #CCB;
+}
+
+@keyframes glow {
+    0%{
+        
+  background-color: #222;
+
+    }
+    50% {
+        background-color: #40403A;
+        box-shadow: 0px 5px 30px #FFF8;
+
+    }
+    100% {
+
+    }
+    
 }
 
 @keyframes marquee {
@@ -41,20 +71,21 @@ h1{
 
 <template>
     <Header/>
-    <div class="paper-bg"></div>
-    <div class="banner-img w-screen absolute">
-        <img src="../../assets/img/shaktiman.png" alt="" srcset="">
-    </div>
-    <h1 class="m-[20px] text-[10vw] text-center mt-[32%] sm:text-7xl sm:mt-[30%]">Games</h1>
-    <div class="tagline z-2 relative">
-        <div class="tag z-50">
+    <div class="tagline z-2 relative cursor-pointer">
+        <div onclick="window.location.href='games/vertle'" class="tag z-50">
             <a href="/games/vertle">
                 Guess today's word in vertle!!
             </a>
         </div>
     </div>
+
+    <div class="paper-bg"></div>
+    <div class="banner-img w-screen absolute">
+        <img src="../../assets/img/shaktiman.png" class="shadow" alt="" srcset="">
+    </div>
+    <h1 class="m-[20px] text-[10vw] text-center mt-[32%] sm:text-7xl sm:mt-[30%]">Games</h1>
     
-    <div class="flex flex-col w-screen justify-center items-center">
+    <div class="flex flex-col w-screen justify-center items-center mt-10">
         <card class="card"
         v-for="(game, index) in games"
         :key="index"

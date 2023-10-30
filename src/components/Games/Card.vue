@@ -2,25 +2,25 @@
 /* Style the card component */
 .card {
   display: flex;
-  align-items: center;
   text-align: center;
-  background-color: #CEC5BB;
+  background-image: url('https://cdn.creazilla.com/illustrations/1797652/old-paper-texture-background-illustration-md.jpeg');
   border-radius: 25px;
   width: 100%;
-  border: 1px solid #DED5CB;
+  border: 1px solid #775;
   box-shadow: -10px 10px 50px #0002;
 }
 
 /* Style the image container with overlay text */
 .card-image-container {
-  position: relative;
+  position: static;
 }
 
 /* Style the card image */
 .card-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   height: auto;
+  box-shadow: 0 0 8px #000;
 }
 
 /* Style the overlay text */
@@ -39,27 +39,36 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 200px;
   width: 100%;
   margin-left: 40px;
   text-align: left;
+  font-family: 'Times New Roman';
+  gap: 20px;
+  font-weight: bold;
 }
 
 /* Style the title */
 .card-title {
-  font-size: 24px;
+  font-size: 3.5vw;
   font-weight: bold;
+  font-family: Chomsky;
 }
 
 /* Style the description */
 .card-description {
-  font-size: 16px;
+  font-size: 22px;
 }
 
-.details-btn{
-  border: 2px solid #222;
+.card-deadline {
+  font-size: 18px;
+}
+
+.details-btn {
+  border: 1px solid #000A;
   color: #222;
   height: 40px;
+  width: 100%;
+  margin-top: 20px;
 }
 .details-btn:hover {
   background: #222;
@@ -80,8 +89,10 @@
         <div class="card-details">
             <h2 class="card-title">{{ game.name }}</h2>
             <p class="card-description">{{ game.about }}</p>
-            <p class="no-of-participants">Deadline: {{ game.date }}</p>
-            <button class="details-btn" @click="showModal = true">Details</button>
+            <div>
+              <p class="card-deadline">Deadline {{ game.date }}</p>
+              <button class="details-btn" @click="showModal = true">Details</button>
+            </div>
         </div>
 
 
