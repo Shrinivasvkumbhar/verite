@@ -16,20 +16,18 @@
         "10":"verite"
     },
     "music": {
-        "28": "/music/pac-man.mp3",
-        "29": "/music/Doordarshan.mp3",
-        "30": "/music/arcade-music.mp3",
-        "31": "/music/pac-man.mp3",
-        "1": "/music/Doordarshan.mp3",
-        "2": "/music/arcade-music.mp3",
-        "3": "/music/pac-man.mp3",
-        "4": "/music/Doordarshan.mp3",
-        "5": "/music/arcade-music.mp3",
-        "6": "/music/pac-man.mp3",
-        "7": "/music/Doordarshan.mp3",
-        "8": "/music/arcade-music.mp3",
-        "9": "/music/pac-man.mp3",
-        "10": "/music/Doordarshan.mp3"
+        "30": "/music/Yeh Raaten Yeh Mausam.mp3",
+        "31": "/music/Yeh Raaten Yeh Mausam.mp3",
+        "1": "/music/En Iniya Pon Nilave.mp3",
+        "2": "/music/Neele Neele Ambar.mp3",
+        "3": "/music/shyama mekham.mp3",
+        "4": "/music/poove sempoove un vasam varum.mp3",
+        "5": "/music/Kabhi Kabhi Mere Dil Mein.mp3",
+        "6": "/music/Oru Pushpam Maathramen.mp3",
+        "7": "/music/eeran mekham.mp3",
+        "8": "/music/Pehla Nasha.mp3",
+        "9": "/music/Elangaathu Veesudhey.mp3",
+        "10": "/music/Arikil Nee Undayirunnenkil.mp3"
     },
     "upImages": [
         "/img/posters/Azaad.jpg",
