@@ -34,6 +34,7 @@
     display: flex;
     height: 100vh;
     width:100vw;
+    user-select: none;
 }
 
 .tv-static {
@@ -52,6 +53,25 @@
     top: 42%;
     left: 22.5%;
 }
+.door-img{
+  position: absolute;
+   top: 20%;
+    left: 15.5%;
+  scale: 0.3;
+  transform: rotatey(35deg);
+  filter: brightness(2);
+  filter: grayscale(2%);
+  filter: drop-shadow(-8px -18px 30px rgb(24, 46, 84));
+}
+.tv-static{
+   position: absolute;
+    z-index: -1;
+    top: 45%;
+    left: 22.5%;
+    scale:4;
+
+}
+
 
 .countdown-label {
     position: absolute;
@@ -66,11 +86,15 @@
   /* animation: glitch 1s linear infinite; */
   color: snow;
   display: flex;
-  color:rgb(14, 249, 14);
-  text-shadow: 0px 0px 200px #BEB5AB,
-                    0px 0px 100px #BEB5AB,
-                    0px 0px 25px #FFFA;
+  color:rgb(33, 13, 218);
+  text-shadow: 0px 0px 200px #2281ad,
+                    0px 0px 100px #3e4dc6,
+                    0px 0px 25px rgba(15, 39, 91, 0.667);
 
+}
+.television a{
+  color:rgb(117, 107, 207);
+  font-size: larger;
 }
 
 @keyframes glitch {
@@ -147,7 +171,7 @@
   
 }
 .label{
-  font-size: x-large;
+  font-size: large;
  writing-mode: vertical-lr;
  text-orientation: upright;
   letter-spacing: -0.2em;
@@ -179,13 +203,14 @@
                     <source src="../assets/music/Doordarshan.mp3" type="audio/mpeg">
                   </audio> -->
                 <div class="television">
-                   <img  @click="closeAnimation()" src="../assets/img/tv-dark.png" alt="" class="television">
+                    <img src="../assets/gif/tv-static.gif" class="tv-static" alt="" srcset="">
+                   <img  @click="closeAnimation()" src="../assets/img/tv-dark-2.png" alt="" class="television">
                     <!-- <img class="tv-static" src="/src/assets/gif/glitch.gif"/> -->
-                    <span class="countdown" :title="countdown">
-                        {{ countdown }}
+                    <span class="countdown" >
+
                     </span>
-                    <span class="countdown-label"></span>
-                    
+                    <img src="../assets/img/Doordarshan.png" class="door-img" alt="">
+                    <h4 class="absolute bottom-0"><a @click="initializeAudioContext">Click for music</a></h4>
                 </div>
             </div>
         </div>
@@ -235,7 +260,7 @@ methods:{
         this.sound = new Howl({
           src: ['src/assets/music/Doordarshan.mp3'],
           autoplay: true,
-          loop: true,
+          loop: false,
           volume: 0.5,
         });
         this.isAudioInitialized=true;

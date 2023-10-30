@@ -4,24 +4,24 @@
 <template>
     <main>
         <Header />
-        <div class="main-wrapper flex-col sm:!mx-2">
+        <div class="main-wrapper flex-col sm:!mx-2 sm:flex-col-reverse">
            
             <div class="flex flex-row items-start justify-around h-fit mt-[50px] sm:flex-col">
                 <HeadCard :image="'pager.jpg'" :heading="'Beep. Play. Repeat'" :description="'Witnessing a revolutionary leap in communication, India embraces the launch of the Nostalgic Pager, facilitating instantaneous connectivity nationwide'"/>
                 <div class="center-head-card head-card flex flex-col sm:w-full sm:h-1/2 sm:mb-12 sm:border-y-[1px] sm:border-x-0 sm:border-[#1d1d1b]">
-                    <h2 class="sm:!text-4xl">Team Bidding!</h2>
+                    <h2 class="sm:!text-4xl">Ready, Set!</h2>
                     <p class="paper-desc paper-desc-head sm:!text-3xl">
-                        Get set to compose your squads for Verite's grand affair!
+                       Unity and strategy key. Plan, communicate, conquer for Verite triumph!
                     </p>
                     <p class="paper-desc !text-center !mt-10 sm:text-xl">
-                        Start low, aim high!
+                        GO!
                     </p>
                 </div>
                 <HeadCard :image="'sooper-11.png'" :heading="'SOOPER 11'" :description="'Verteil introduces SOOPER11, a thrilling cricket fantasy game exclusively for Verteil employees, adding excitement to the World Cup 23'"/>
             </div>
              <div>
-                <div  class="head flex justify-center overflow-hidden">
-                    <div class="text" id="verite">Vérité</div>
+                <div  class="head flex justify-center overflow-hidden !m-0 h-[400px] sm:h-[200px] sm:!mt-5">
+                    <img id="verite" class="invert brightness-0 sepia-50 scale-150 sm:scale-90" src="../../assets/img/logo.PNG" alt="">
                 </div>
                 <div class="mt-16 flex">
                     <div class="w-2/5 mr-[10%]">

@@ -40,11 +40,7 @@ export default {
 </script>
 
 <style>
-.svg-player {
-    width: 50vw;
-    clip-path: inset(0 0 0 40%);
-    margin-left: -40%;
-}
+
 
 .player-on {
     position: absolute;
@@ -129,7 +125,7 @@ fill: #f2f2f2;
 
 <template>
   <div class="h-full vinyl-wrap overflow-hidden relative">
-    <img src="../../assets/img/vinyl.png" id="groove" :class="{ 'spin-groove': isPlaying }" class=" relative left-[-20%] top-[-15%] h-[145%]" alt="" srcset="">
+    <img src="../../assets/img/vinyl.png" id="groove" :class="{ 'spin-groove': isPlaying }" class=" relative left-[-20%] top-[-15%] scale-100  sm:scale-110" alt="" srcset="">
     <div @click="toggleAudio" class="controls absolute top-0 right-0 h-5 p-4">
       <img v-if="!isPlaying" src="../../assets/img/play.png" alt="">
       <img v-else src="../../assets/img/pause.png" alt="">

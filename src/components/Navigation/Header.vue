@@ -8,7 +8,7 @@
             <Menu/>
                 <div class="top-nav w-screen">
                     <div class="logo-group pl-[7%] pr-[7%] select-none sm:h-20">
-                        <div class="w-[3%] pointer-events-none">
+                        <div class="w-[3%] pointer-events-none sm:w-[6%]">
                             <img src="../../assets/svg/logo/VERTEIL_LOGO.svg" alt=""/>
                         </div>
                          <div class="v-head">

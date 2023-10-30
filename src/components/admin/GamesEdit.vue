@@ -49,6 +49,8 @@ td input{
         <h1>ADD GAMES</h1>
         <div class="flex flex-col w-1/2">
             <input v-model="gameName" placeholder="Game Name" class="outline-none"/>
+            <input type="file" accept="image/*" @change="onFileChange"/>
+            <Editor  v-model="rulesEditor" placeholder="Format Rules here"/>
             <button @click="addGame">Add Game</button>
         </div>
       </div>
@@ -107,9 +109,11 @@ import { getFirestore, collection, getDocs,doc,updateDoc,setDoc } from 'firebase
 import teamsData from '../../utils/teams.json';
 import { getAuth, signOut } from 'firebase/auth';
 import { setPersistence, browserSessionPersistence } from 'firebase/auth';
+import {  ref as storageRef, uploadBytes, getDownloadURL,getStorage } from "firebase/storage";
 import { useRouter } from 'vue-router';
+import Editor from 'primevue/editor';
 const db = getFirestore(app);
-
+const storage = getStorage(app);
 export default {
     setup() {
          const auth = getAuth();
@@ -119,6 +123,14 @@ export default {
         const games = ref([]);
         const teams = ref([]);
         const selectedGame = ref('game 1');
+        const rulesEditor = ref(null);
+        const gamePoster = ref(null);
+        
+        const onFileChange = (e) => {
+            const file = e.target.files[0];
+            gamePoster.value = file;
+        };
+
         const logout=async ()=> {
            
            
@@ -165,10 +177,40 @@ export default {
                 });
             });
         };
+        // const addGame = async () => {
+        //     const gamesRef = collection(db, 'games');
+        //     const gameDocRef = doc(gamesRef, gameName.value);
+        //     await setDoc(gameDocRef, { game_name: gameName.value });
+
+        //     const teams = teamsData.teams;
+
+        //     teams.forEach(async (team) => {
+        //         const gameCol = collection(gameDocRef, 'teams');
+        //         const teamDocRef = doc(gameCol, team.team_id);
+        //         await setDoc(teamDocRef, { team_name: team.team_name, points: team.points });
+        //     });
+
+        //     // Clear input field after adding the game
+        //     gameName.value = '';
+        //     fetchGames()
+        //     fetchTeams()
+        // };
         const addGame = async () => {
             const gamesRef = collection(db, 'games');
             const gameDocRef = doc(gamesRef, gameName.value);
             await setDoc(gameDocRef, { game_name: gameName.value });
+
+            if (gamePoster.value) {
+                const posterRef = storageRef(storage, `game_posters/${gameDocRef.id}`);
+                await uploadBytes(posterRef, gamePoster.value);
+                const posterUrl = await getDownloadURL(posterRef);
+                await updateDoc(gameDocRef, { game_poster: posterUrl });
+            }
+
+            if (rulesEditor.value) {
+                const gameRules = rulesEditor.value;
+                await updateDoc(gameDocRef, { rules: gameRules });
+            }
 
             const teams = teamsData.teams;
 
@@ -180,8 +222,8 @@ export default {
 
             // Clear input field after adding the game
             gameName.value = '';
-            fetchGames()
-            fetchTeams()
+            fetchGames();
+            fetchTeams();
         };
 
         onMounted(() => {
@@ -194,12 +236,15 @@ export default {
             teams,
             selectedGame,
             gameName,
+            gamePoster,
+            rulesEditor,
             addPoints,
             addGame,
             fetchTeams,
             logout,
+            onFileChange
         };
     },
-    components:{Header}
+    components:{Header,Editor}
 };
 </script>

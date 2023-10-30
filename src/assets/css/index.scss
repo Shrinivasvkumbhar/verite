@@ -285,14 +285,20 @@ font-family: Canopee;
 {
         display: inline-block;
             border: 1px solid black;
+            border-left:0 ;
             width: 4vw !important;
             height: 4vw;
             text-align: center;
-            padding: 5px;
+            padding: 1px;
             font-family: monospace;
             font-size: 2vw;
             font-weight: lighter;
+            :first-child{
+                border-left: 1px solid #1d1d1b
+            }
 }
+
+
 //section2
 
 .banner-text{

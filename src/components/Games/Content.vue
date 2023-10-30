@@ -86,7 +86,7 @@ h1{
     <h1 class="m-[20px] text-[10vw] text-center mt-[32%] sm:text-7xl sm:mt-[30%]">Games</h1>
     
     <div class="flex flex-col w-screen justify-center items-center mt-10">
-        <card class="card"
+        <card class="card sm:w-[90%]"
         v-for="(game, index) in games"
         :key="index"
         :game="game"
@@ -95,10 +95,32 @@ h1{
 </template>
 
 <script>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyDdVa3kY-11_jpsT_Fw6wBXPq4BBm7M_0g",
+    authDomain: "verite-45774.firebaseapp.com",
+    projectId: "verite-45774",
+    storageBucket: "verite-45774.appspot.com",
+    messagingSenderId: "340822673051",
+    appId: "1:340822673051:web:254f4d49dca48aef7ce83e",
+    measurementId: "G-K8G599E418"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 import Card from './Card.vue'
 import games from '../../utils/games.json'
 import Header from '../Navigation/Header.vue';
 
+import { getFirestore, collection, getDocs,doc} from 'firebase/firestore';
+const db = getFirestore(app);
 export default {
     components: {
     Card,
@@ -106,8 +128,37 @@ export default {
 },
     data() {
         return {
-            games: games,
+            games: null,
         };
-    }
-};
+    },
+    mounted()
+    {
+        this.fetchGames()
+    },
+    methods:
+    {
+        
+        async fetchGames() {
+            const gamesCol = await collection(db, 'games');
+            const response = await getDocs(gamesCol);
+            const gamesData = [];
+
+            await Promise.all(response.docs.map(async (document) => {
+                const teamsCollectionRef = collection(doc(db, 'games', document.id), 'teams');
+                const querySnapshot = await getDocs(teamsCollectionRef);
+                const gameData = {
+                    id: document.id,
+                    name: document.data().game_name,
+                    poster: document.data().game_poster,
+                    rules: document.data().rules,
+                    scores: querySnapshot.docs.map(team => ( { team_name: team.data().team_name, points: team.data().points } )).sort((a, b) => b.points - a.points)
+                };
+                gamesData.push(gameData);
+            }))
+
+            this.games = gamesData;
+            
+        }
+    },
+}
 </script>

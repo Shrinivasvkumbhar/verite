@@ -17,21 +17,17 @@
                                 the Vintage Aura
                             </div>
                     </div>
-                    <div class="text-[2.5vw] w-3/4 mt-10">
+                    <div class="text-[2.5vw] w-3/4 mt-10 sm:text-[2em]">
                         A Retro Ride to the Past, Where Memories Unfold.
                     </div>
                     </div>
-                    <div class="banner-retro w-[60%] absolute right-0 ">
+                    <div class="banner-retro w-[60%] absolute right-0  sm:w-[70%]">
                         <img class="z-3" src="../../assets/svg/retro-stripes.svg" alt="">
                     </div>
                 </div>
-                <div class="!w-[300vw] banner-text">
-                    <img src="../../assets/img/mango-bite.png" alt="aaaa" srcset="" ref="candy">
-                    <h1 class="about !bg-transparent">Dive into the timeless enchantment of <span class="button-74 small-btn !bg-[#0ae448] !text-[4vw] !text-black rotate-[6.5deg] !p-5" ref="verite">Verité</span> where <span class="button-74 small-btn !p-5 gradient-btn-1 !text-[4vw] relative bottom-10">cherished</span><span class="button-74 small-btn !p-5 gradient-btn-2 !text-[4vw] !shadow-none rotate-[15deg] relative right-5 z-[-1]">memories</span> and vibrant echoes of yesteryears</h1>
-                </div>
-                
-                <div>
-                    <h1>carolinAs pepsi</h1>
+                <div class="!w-[300vw] banner-text sm:!w-[200vw]">
+                    <img src="../../assets/img/mango-bite.png" alt="aaaa" srcset="" ref="candy" class="sm:hidden">
+                    <h1 class="about !bg-transparent sm:!text-[5em] sm:h-full sm:w-1/2 sm:!mt-10">Dive into the timeless enchantment of <span class="button-74 small-btn !bg-[#0ae448] !text-[4vw] !text-black rotate-[6.5deg] !p-5 sm:!p-3 sm:!text-[6vw]" ref="verite">Verité</span> where <span class="button-74 small-btn !p-5 gradient-btn-1 !text-[4vw] relative bottom-10 sm:!p-3 sm:!text-[6vw] sm:bottom-5">cherished</span><span class="button-74 small-btn !p-5 gradient-btn-2 !text-[4vw] !shadow-none rotate-[15deg] relative right-5 z-[-1]">memories</span> and vibrant echoes of yesteryears</h1>
                 </div>
             </div>
         </section>
@@ -175,6 +171,12 @@ section>h1 {
     width: fit-content;
     align-items: flex-start;
     /* border: 2px solid #cdc6be; */
+}
+@media screen and (max-width: 450px) {
+    .slider-container{
+        height: 100vh;
+    }
+    
 }
 .black-bg{
     content: "";

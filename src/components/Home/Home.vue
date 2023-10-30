@@ -1,13 +1,13 @@
 <template>
     <div class="paper-bg"></div>
-    <!-- <CountDown v-if="show" :show="show" @close="show=false"/> -->
+    <CountDown v-if="show" :show="show" @close="show=false"/>
     <MainClone/>
     <PostCard/>
 
      <div class="black-bg">
         <div class="paper-bg"></div>
         <Section1/>
-        <section class="section-3">
+        <section class="section-3 sm:p-2 sm:!m-0">
             <Player/>
             <!-- <Poster/> -->
         </section>

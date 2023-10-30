@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 /* Style the card component */
 .card {
   display: flex;
@@ -56,7 +56,8 @@
 
 /* Style the description */
 .card-description {
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .card-deadline {
@@ -75,23 +76,36 @@
   color: #DDD;
 }
 
+table{
+  width: 100% !important;
+  font-size: 2em;
+  text-align: center;
+}
+th,td{
+  border: 1px solid #cdc6be;
+}
+h2{
+  font-family: Chomsky;
+  font-size: 3em;
+  text-align: center;
+}
 </style>
 
 <template>
-    <div class="card" id="show-modal">
+    <div class="card sm:flex-col" id="show-modal">
         <!-- Image at the top with overlay text -->
         <div class="card-image-container">
-            <img :src="game.image" alt="Card Image" class="card-image" />
+            <img :src="game.poster" alt="Card Image" class="card-image" />
             <!-- <span class="overlay-text">The Game</span> -->
         </div>
 
         <!-- Left-aligned details -->
-        <div class="card-details">
-            <h2 class="card-title">{{ game.name }}</h2>
-            <p class="card-description">{{ game.about }}</p>
+        <div class="card-details sm:!m-0">
+            <h2 class="card-title sm:!text-4xl sm:mt-5">{{ game.name }}</h2>
+            <p class="card-description" v-html="game.rules"></p>
             <div>
-              <p class="card-deadline">Deadline {{ game.date }}</p>
-              <button class="details-btn" @click="showModal = true">Details</button>
+              
+              <button class="details-btn" @click="showModal = true">Scores</button>
             </div>
         </div>
 
@@ -103,11 +117,18 @@
             <h2>{{game.name}}</h2>
             </template>
             <template #body>
-              <img :src="game.image"/>
-                <!-- <h4>{{game.about}}</h4>
-                <p v-for="(rule, ind) in game.rules">
-                    {{ ind+1 }}. {{ rule }}
-                </p> -->
+              <table>
+                <thead>
+                  <th>Team</th>
+                  <th>Points</th>
+                </thead>
+                <tbody>
+                  <tr v-for="team in game.scores">
+                    <td>{{ team.team_name }}</td>
+                    <td>{{ team.points }}</td>
+                  </tr>
+                </tbody>
+              </table>
             </template>
         </modal>
         </Teleport>
