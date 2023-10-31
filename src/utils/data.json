@@ -40,5 +40,31 @@
         "/img/posters/Zameer.jpg",
         "/img/posters/Azaad.jpg",
         "/img/posters/Zameer.jpg"
+    ],
+    "blogs": [
+        {
+            "author": "Manu Prasad",
+            "content": "The last Verite event was truly an unforgettable experience for us all. Witnessing our colleagues on the screen and then meeting them in person was an incredibly heartwarming moment. Last year's Verite commenced with everyone gathering at the office, and it was the first time I had ever seen the office so brimming with people; there was not an inch of space left, and it felt truly amazing. The energy in the room was soaring, and the sight of smiling faces all around was nothing short of uplifting. We later moved to Recca Club, where everyone was divided into teams. The day was filled with an array of exciting games, and it was delightful to witness senior members wholeheartedly engaging in friendly competition, even mentoring the younger generation. The games were so exciting that time seemed to slip away unnoticed. As evening turned into night, the DJ started playing, and the dance floor came alive with exuberant moves. It was evident that everyone was relishing the moment, their joy radiating from their faces. The dance continued tirelessly, and eventually, the food counter opened, with everyone rushing to savor the delectable dishes with utmost enjoyment. The event was a remarkable success and left us thinking how wonderful it would be if such shared experiences were a daily occurrence in our office. It was an extraordinary experience that has us eagerly anticipating the next Verite event.",
+            "image": "/img/blogs/Manu Prasad.jpg",
+            "showReadMore": false
+        },
+        {
+            "author": "Fathima Kauzar",
+            "content": "With seeing 10-15 people in the office all the days, it was really heart whelming to see a whole group of people together. I remember the exact date, on September 1, Verite’22 happened in Recca club. All the joyous laughs, screams and energetic hurray for the games, still hit so close to the heart. With this annual gathering, I believe, there’s a whole bunch of people who’s waiting out there for this. I get many messages from my colleagues asking when would this day be, that is how much we all are waiting for this day. I wasn’t connected to any of the people in the office, initially as it was the starting of my job, but Vertite’22 made it very easy and it felt like home. The games was the way to this.",
+            "image": "/img/blogs/Fathima Kauzar.jpg",
+            "showReadMore": false
+        },
+        {
+            "author": "Reshma Sankar",
+            "content": "The anniversary that I for-saw with excitement pressed me with anxiety as I was not in touch with everyone in the office initially. Coming to the anniversary, I got to understand how team activities change the dimension of get-togetherness. Verite’22 was an opportunity for me to understand how huge and celebrated this day is. With the team activities that we get in, it had me very easy to gel with people and know the fabulous company culture. I felt good when I saw the luxury of foods, and the gifts that was offered by Verteil. It was a new experience for me to receive those from a company that I work in. I am very excited for Verite’23.",
+            "image": "/img/blogs/Reshma Sankar.jpg",
+            "showReadMore": false
+        },
+        {
+            "author": "Shahul",
+            "content": "It was really an exciting day for me. To start with, I am a person who likes to talk and connect with people. VERITE’22 made it very easy. It was great when all the people that I met in a screen for meetings came to a place where there was no barrier. I am excited, and enthused for the games that are coming. Those games have a huge role in binding up the people in here. The Onam Sadhya, the band, the songs played, the joyous steps, dances are all so new even now that it feels like it all happened yesterday. Really excited and waiting for Verite’23.",
+            "image": "/img/blogs/Shahul.jpg",
+            "showReadMore": false
+        }
     ]
 }
