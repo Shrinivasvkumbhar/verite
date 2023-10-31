@@ -9,20 +9,22 @@
         <div class="content">
             <div class="team-card" v-for="(team, index) in teams">
                 <div class="team-signature">
-                    <img class="team-logo" :src="team.logo" :alt="team.name"/>
-                    <div class="team-about">
-                        <router-link :to="'/team/' + team.name">
-                            <div class="team-name">{{ team.name.toUpperCase() }}</div>
-                        </router-link>
-                        <div class="team-tagline">{{ team.tagline }}</div>
+                    <!-- <div> -->
+                        <img class="team-logo" :src="team.logo" :alt="team.name"/>
+                        <div class="team-about">
+                            <router-link :to="'/team/' + team.name">
+                                <div class="team-name">{{ team.name.toUpperCase() }}</div>
+                            </router-link>
+                            <div class="team-tagline">{{ team.tagline }}</div>
+                        </div>
+                    <!-- </div> -->
+                    <div class="team-captains-img">
+                        <img class="captain-img" :src="team.captainImage" alt="">
+                        <!-- <div class="captain-card" v-for="(captain) in team.captains">
+                            <div class="captain-name">{{ captain.name.toUpperCase() }}</div>
+                            <img class="captain-img" :src="team['capt-img']" alt="">
+                        </div> -->
                     </div>
-                </div>
-                <div class="team-captains">
-                    <img class="captain-img" :src="team['capt-img']" alt="">
-                    <!-- <div class="captain-card" v-for="(captain) in team.captains">
-                        <div class="captain-name">{{ captain.name.toUpperCase() }}</div>
-                        <img class="captain-img" :src="team['capt-img']" alt="">
-                    </div> -->
                 </div>
             </div>
         </div>

@@ -5,15 +5,15 @@
       "logo": "/img/logo/Mario Mavericks.png",
       "captains": [
         {
-          "name": "Reshma Sankar Thekkepatt",
-          "photo": "pager.jpg"
-        },
-        {
           "name": "Saji C S",
           "photo": "captain2.jpg"
+        },
+        {
+          "name": "Reshma Sankar Thekkepatt",
+          "photo": "pager.jpg"
         }
       ],
-      "capt-img": "/img/captains/Mario Mavericks.JPG",
+      "captainImage": "/img/captains/Mario Mavericks.JPG",
       "members": [
         {
           "name": "Nevin Perumana",
@@ -147,7 +147,7 @@
           "photo": "captain2.jpg"
         }
       ],
-      "capt-img": "/img/captains/Udaan.JPG",
+      "captainImage": "/img/captains/Udaan.JPG",
       "members": [
         {
           "name": "Shamsuddin T U",
@@ -277,7 +277,7 @@
             "photo": "captain2.jpg"
           }
         ],
-        "capt-img": "/img/captains/Kattan Chai.JPG",
+        "captainImage": "/img/captains/Kattan Chai.JPG",
         "members": [
           {
             "name": "Jerrin Jos",
@@ -407,7 +407,7 @@
             "photo": "captain2.jpg"
           }
         ],
-        "capt-img": "/img/captains/Naaranga Mittai.JPG",
+        "captainImage": "/img/captains/Naaranga Mittai.JPG",
         "members": [
           {
             "name": "Satheesh Satchit",

@@ -83,6 +83,7 @@ table{
   width: 100% !important;
   font-size: 2em;
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 th,td{
   border: 1px solid #cdc6be;

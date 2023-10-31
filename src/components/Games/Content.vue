@@ -81,7 +81,7 @@ h1{
 
     <div class="paper-bg"></div>
     <div class="banner-img w-screen absolute">
-        <img src="../../assets/img/shaktiman.png" class="shadow" alt="" srcset="">
+        <img src="../../assets/img/shaktiman.png" class="shadow w-screen" alt="" srcset="">
     </div>
     <h1 class="m-[20px] text-[10vw] text-center mt-[32%] sm:text-7xl sm:mt-[30%]">Games</h1>
     
