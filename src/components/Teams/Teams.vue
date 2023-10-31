@@ -10,7 +10,9 @@
             <div class="team-card" v-for="(team, index) in teams">
                 <div class="team-signature">
                     <!-- <div> -->
-                        <img class="team-logo" :src="team.logo" :alt="team.name"/>
+                        <router-link :to="'/team/' + team.name">
+                            <img class="team-logo" :src="team.logo" :alt="team.name"/>
+                        </router-link>
                         <div class="team-about">
                             <router-link :to="'/team/' + team.name">
                                 <div class="team-name">{{ team.name.toUpperCase() }}</div>
