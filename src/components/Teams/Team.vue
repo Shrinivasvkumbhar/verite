@@ -1,5 +1,5 @@
 <style scoped>
-.content {
+.teams-content {
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -102,7 +102,7 @@
 
 <template>
     <Header/>
-    <div class="content">
+    <div class="teams-content">
         <div class="team-header">
             <img :src="team.logo" class="team-logo" alt="Logo"/>
             <div class="team-about">

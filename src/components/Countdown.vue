@@ -1,7 +1,7 @@
 <style>
 /* @import './styles.scss'; */
 
-.content-mask {
+.tv-content-mask {
   position: fixed;
   z-index: 9998;
   top: 0;
@@ -13,19 +13,20 @@
   animation: opacity 0.3s ease;
 }
 
-.content {
+.tv-content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   /* background-color: rgb(208, 208, 208); */
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.content:before {
+.tv-content:before {
   opacity: 0;
 }
 
-.content:after {
+.tv-content:after {
   opacity: 0;
 }
 
@@ -211,8 +212,8 @@
   opacity: 0;
 }
 
-.countdown-enter-from .content,
-.countdown-leave-to .content {
+.countdown-enter-from .tv-content,
+.countdown-leave-to .tv-content {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 } */
@@ -220,7 +221,7 @@
 
 <template>
   <div class="content-mask tv-mask" ref="tv">
-    <div class="content">
+    <div class="tv-content">
       <!-- <audio controls autoplay>
                     <source src="../assets/music/Doordarshan.mp3" type="audio/mpeg">
                   </audio> -->

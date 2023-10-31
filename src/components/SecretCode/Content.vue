@@ -3,7 +3,7 @@
     font-size: xx-large;
     padding: 20px;
 }
-.content {
+.sc-content {
     /* background: snow; */
     background-image: "paper-bg-2.jpg";
     color: #333;
@@ -60,7 +60,7 @@
 </style>
 
 <template>
-    <div class="content">
+    <div class="sc-content">
         <h1 class="title">V E R T L E</h1>
         <div class="grid" v-for="x in chances" :key="x">
             <div class="character-container" v-for="(char, y) in code" :id="x * code.length + y">

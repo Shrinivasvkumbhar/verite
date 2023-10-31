@@ -8,7 +8,7 @@
     padding: 10px;
 }
 
-.content {
+.teams-content {
     font-family: 'Courier New', Courier, monospace;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));

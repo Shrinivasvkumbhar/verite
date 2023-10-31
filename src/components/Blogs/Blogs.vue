@@ -13,7 +13,7 @@
                 <div class="infos">
                     <img :src="blog.image" alt=""  />
                 </div>
-                <div class="content">
+                <div class="blog-content">
                     <div class="author">
                         {{blog.author}}
                         <!-- <b>ceo &amp; founder "depot webdesigner"</b> -->

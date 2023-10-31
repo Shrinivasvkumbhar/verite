@@ -1,3 +1,8 @@
+<style>
+header{
+    font-family: 'Times New Roman', Times, serif;
+}
+</style>
 <template>
      <header class="v-header ">
         
