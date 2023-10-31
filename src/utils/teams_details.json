@@ -1,8 +1,8 @@
 [
     {
-      "name": "baazigar",
+      "name": "Mario Mavericks",
       "tagline": "Give up on your dream and die!",
-      "logo": "/vite.svg",
+      "logo": "/img/logo/MarioMavericks.png",
       "captains": [
         {
           "name": "Reshma Sankar Thekkepatt",
@@ -13,6 +13,7 @@
           "photo": "captain2.jpg"
         }
       ],
+      "capt-img": "/img/captains/MarioMavericks.png",
       "members": [
         {
           "name": "Nevin Perumana",
@@ -133,9 +134,9 @@
       ]
     },
     {
-      "name": "don",
-      "tagline": "Give up on your dream and die!",
-      "logo": "/vite.svg",
+      "name": "Udaan",
+      "tagline": "Flying High",
+      "logo": "/img/logo/Udaan.jpeg",
       "captains": [
         {
           "name": "Arun J Olickal",
@@ -146,6 +147,7 @@
           "photo": "captain2.jpg"
         }
       ],
+      "capt-img": "/img/captains/Udaan.JPG",
       "members": [
         {
           "name": "Shamsuddin T U",
@@ -262,9 +264,9 @@
       ]
     },
     {
-        "name": "shakti",
-        "tagline": "Give up on your dream and die!",
-        "logo": "/vite.svg",
+        "name": "Kattan Chai",
+        "tagline": "Kattaku Katta",
+        "logo": "/img/logo/Kattan Chai.png",
         "captains": [
           {
             "name": "Akshay Rojan",
@@ -275,6 +277,7 @@
             "photo": "captain2.jpg"
           }
         ],
+        "capt-img": "/img/captains/Kattan Chai.JPG",
         "members": [
           {
             "name": "Jerrin Jos",
@@ -391,9 +394,9 @@
         ]
     },
     {
-        "name": "sholay",
-        "tagline": "Give up on your dream and die!",
-        "logo": "/vite.svg",
+        "name": "Naaranga Mittai",
+        "tagline": "Zest, Zeal, and Zing\nCitrus Candy's Winning Things...!",
+        "logo": "/img/logo/Naaranga Mittai.png",
         "captains": [
           {
             "name": "Muhammaed Anjal",
@@ -404,6 +407,7 @@
             "photo": "captain2.jpg"
           }
         ],
+        "capt-img": "/img/captains/Naaranga Mittai.JPG",
         "members": [
           {
             "name": "Satheesh Satchit",
