@@ -77,8 +77,15 @@ h1{
 
 
 @media screen and (max-width: 500px){
-    th,td{
-        font-size: 2em;
+    td{
+        font-size: 1.8em !important;
+    }
+    td h3{
+        font-size: 1.1em !important;
+    }
+    th{
+        padding: 10px;
+        font-size: 1.8em;
     }
 }
 </style>
@@ -90,8 +97,8 @@ h1{
     </div>
     <div class="w-3/4 mx-auto flex items-center flex-col  mt-[32%] sm:mt-[30%] mb-12">
         <h1 class="mt-7 mb-12 text-[10vw] text-center sm:text-7xl ">Leaderboard</h1>
-        <div class="table-container">
-            <table class="table">
+        <div class="table-container sm:!w-[100%]">
+            <table class="table sm:!text-lg">
                 <thead class="table-header">
                     <th></th>
                     <th style="text-align: left;">Team</th>

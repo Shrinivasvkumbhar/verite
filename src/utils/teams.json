@@ -3,22 +3,22 @@
     [
         {
             "team_id":"team 1",
-            "team_name":"Baazigar",
+            "team_name":"Mario Mavericks",
             "points":0
         },
         {
             "team_id": "team 2",
-            "team_name": "Don",
+            "team_name": "Udaan",
             "points": 0
         },
         {
             "team_id": "team 3",
-            "team_name": "Shakti",
+            "team_name": "Kattan Chai",
             "points": 0
         },
         {
             "team_id": "team 4",
-            "team_name": "Sholay",
+            "team_name": "Naaranga Mittai",
             "points": 0
         }
     ]
