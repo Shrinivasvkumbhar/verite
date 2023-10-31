@@ -13,6 +13,7 @@
         </section>
         <div class="section-4">
         </div>
+        <Blogs/>
         <!-- <Section2/>      -->
      </div>
 </template>
@@ -26,6 +27,7 @@ import CountDown from '../CountDown.vue';
 import PostCard from './PostCard.vue';
 import Player from '../VinylPlayer/Player.vue';
 import Poster from '../Poster.vue';
+import Blogs from '../Blogs/Blogs.vue';
 
 
 export default {
@@ -36,15 +38,16 @@ export default {
         }
     },
     components: {
-        MainClone,
-        Section1,
-        Section2,
-        TextMorph,
-        CountDown,
-        PostCard,
-        Player,
-        Poster
-    }
+    MainClone,
+    Section1,
+    Section2,
+    TextMorph,
+    CountDown,
+    PostCard,
+    Player,
+    Poster,
+    Blogs
+}
 };
 </script>
 

@@ -3,11 +3,12 @@
 .card {
   display: flex;
   text-align: center;
-  background-image: url('https://cdn.creazilla.com/illustrations/1797652/old-paper-texture-background-illustration-md.jpeg');
+  /* background-image: url('https://cdn.creazilla.com/illustrations/1797652/old-paper-texture-background-illustration-md.jpeg'); */
+  background-image: url('https://img.freepik.com/premium-photo/old-paper-texture-background_118047-1365.jpg?w=2000');
   border-radius: 25px;
   width: 100%;
   border: 1px solid #775;
-  box-shadow: -10px 10px 50px #0002;
+  box-shadow: 0px 10px 10px #0007;
 }
 
 /* Style the image container with overlay text */
@@ -65,11 +66,13 @@
 }
 
 .details-btn {
-  border: 1px solid #000A;
+  border: 1px solid #0003;
   color: #222;
   height: 40px;
   width: 100%;
   margin-top: 20px;
+  background-color: #FFFA;
+  box-shadow: 0px 5px 15px #0004;
 }
 .details-btn:hover {
   background: #222;

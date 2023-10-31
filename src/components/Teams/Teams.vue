@@ -5,7 +5,7 @@
 <template>
     <Header/>
     <div class="teams">
-        <div class="title">TEAMS</div>
+        <div class="title text-[10vw]  sm:text-7xl">TEAMS</div>
         <div class="content">
             <div class="team-card" v-for="(team, index) in teams">
                 <div class="team-signature">

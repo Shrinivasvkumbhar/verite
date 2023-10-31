@@ -10,7 +10,7 @@
 
 .card {
     width: 80%;
-    margin: 10px;
+    margin-top: 40px;
 }
 
 .tagline {
