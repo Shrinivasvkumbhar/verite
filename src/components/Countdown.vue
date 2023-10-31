@@ -303,7 +303,7 @@ export default {
       if (!this.isAudioInitialized) {
 
         this.sound = new Howl({
-          src: ['src/assets/music/Doordarshan.mp3'],
+          src: ['/music/Doordarshan.mp3'],
           autoplay: true,
           loop: false,
           volume: 0.5,
