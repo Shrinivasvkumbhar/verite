@@ -21,7 +21,7 @@
             </div>
              <div>
                 <div  class="head flex justify-center overflow-hidden !m-0 h-[400px] sm:h-[200px] sm:!mt-5">
-                    <img id="verite" class="invert brightness-0 sepia-50 scale-150 sm:scale-90" src="../../assets/img/logo.PNG" alt="">
+                    <img id="verite" class="invert brightness-0 sepia-50 scale-150 sm:scale-90" src="../../assets/img/logo.png" alt="">
                 </div>
                 <div class="mt-16 flex">
                     <div class="w-2/5 mr-[10%]">

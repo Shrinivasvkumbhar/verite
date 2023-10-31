@@ -1,5 +1,6 @@
 .teams {
     font-family: 'Courier New', Courier, monospace;
+    width: 100%;
 }
 
 .title {
@@ -9,6 +10,7 @@
 }
 
 .teams-content {
+    width: 80%;
     font-family: 'Courier New', Courier, monospace;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
@@ -42,8 +44,7 @@
 }
 
 .team-logo {
-    width: 100px;
-    height: 100px;
+    width: 40%;
     /* filter: grayscale(100%); */
     /* border: 1px solid black; */
 }
@@ -87,8 +88,9 @@
 }
 
 .captain-img {
-    width: 120px;
-    height: 120px;
+    width: 70vw;
+    height: 70vw;
+    /* height: 120px; */
     /* filter: grayscale(100%); */
     /* border-radius: 50%; */
 }

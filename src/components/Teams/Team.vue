@@ -77,11 +77,18 @@
 }
 
 .member-card {
+    width: 80%;
+    background-color: #111;
+    color: snow;
+    padding: 10px;
+}
+
+/* .member-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
-}
+} */
 
 .member-card img {
     width: 80px;
@@ -93,9 +100,11 @@
 }
 
 .member-name {
-    font-size: 12px;
-    text-align: center;
-    width: 100px;
+    font-size: 16px;
+    /* text-align: center; */
+    /* width: 100px; */
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 250, 250, 0.373);
 }
 
 </style>
@@ -110,9 +119,9 @@
                 <div class="team-tagline">{{ team.tagline }}</div>
             </div>
         </div>
+        <img src="/pager.jpg" alt="Captain" />
         <div class="captain-cards">
             <div v-for="(captain, ind) in team.captains" :key="ind" class="captain-card">
-            <img src="/pager.jpg" alt="Captain" />
             <div class="captain-info">
                 <div class="captain-name">{{ captain.name.toUpperCase() }}</div>
                 <div class="captain-position">Team Captain</div>
@@ -121,7 +130,7 @@
         </div>
         <div class="members">
             <div v-for="(member, mIndex) in team.members" :key="mIndex" class="member-card">
-                <img src="/sooper-11.png" alt="Member" />
+                <!-- <img src="/sooper-11.png" alt="Member" /> -->
                 <div class="member-name">{{ member.name.toUpperCase() }}</div>
             </div>
         </div>

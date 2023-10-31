@@ -18,10 +18,11 @@
                     </div>
                 </div>
                 <div class="team-captains">
-                    <div class="captain-card" v-for="(captain) in team.captains">
+                    <img class="captain-img" :src="team['capt-img']" alt="">
+                    <!-- <div class="captain-card" v-for="(captain) in team.captains">
                         <div class="captain-name">{{ captain.name.toUpperCase() }}</div>
-                        <img class="captain-img" src="/pager.jpg" alt="">
-                    </div>
+                        <img class="captain-img" :src="team['capt-img']" alt="">
+                    </div> -->
                 </div>
             </div>
         </div>
