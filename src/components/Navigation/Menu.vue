@@ -9,9 +9,9 @@
                 <a href="/games" class="nav-item" ref="navItem2">
                     <h1 class="menu-title sm:!text-6xl">Games</h1>
                 </a>
-                <a href="/teams" class="nav-item" ref="navItem3">
+                <!-- <a href="/teams" class="nav-item" ref="navItem3">
                     <h1 class="menu-title sm:!text-6xl">Teams</h1>
-                </a>
+                </a> -->
                 <a href="/leaderboard" class="nav-item" ref="navItem4">
                     <h1 class="menu-title sm:!text-6xl">Leaderboard</h1>
                 </a>
